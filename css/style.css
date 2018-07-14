@@ -1,0 +1,67 @@
+﻿@charset "UTF-8";
+body {
+  background-image: url(../images/room01.png);
+  background-position: center center;   /* 画像を常に天地左右の中央に配置 */
+  background-repeat: no-repeat; 
+  background-attachment: fixed;   
+  z-index: -11;
+
+}
+/*本棚------------------------------*/
+.link1 a {
+    position: absolute;
+    width: 150px;
+    height: 170px;
+    top: 230px;
+    left: 660px;
+    z-index: 100000000000;
+}
+
+.example1{
+    position: absolute;
+    top: 210px;
+    left: 660px;
+    z-index: -1;
+}
+
+/*絵画------------------------------*/
+.example2{
+    position: absolute;
+    top: 10px;
+    left: 350px;
+    z-index: -1;
+}
+
+.link2 a {
+    position: absolute;
+    width: 100px;
+    height: 110px;
+    top: 10px;
+    left: 350px;
+    z-index: 100000000000;
+}
+
+/*机------------------------------*/
+#table img{
+    position: absolute;
+    top: 369px;
+    left: 710px;
+    z-index: -2;
+}
+
+/*ケーキ------------------------------*/
+.example3{
+    position: absolute;
+    top: 430px;
+    left: 770px;
+    z-index: -1;
+}
+
+.link3 a {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 430px;
+    left: 770px;
+    z-index: 100000000000;
+}
