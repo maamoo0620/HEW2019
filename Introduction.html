@@ -4,47 +4,102 @@
     <meta charset='utf-8'>
     <title>はじめてのショッピングサイト</title>
     <style>
-        body{
-            background-color:gray;
-        }
-        #home{
-            width:800px;
-            height:500px;
-            margin:0 auto;
-            background-color:black;
-        }
-        #start{
-          width:300px;
-          height:100px;
-          margin:0 auto;
-          border-radius:50px;
-          background-color:aqua;
-          text-align:center;
-          font-size:40px;
-        }
-        #move{
-          height:50px;
-          padding:25px;
-        }
-        #move a{
-          text-decoration:none;
-          color:white;
-          font-weight:bold;
-        }
+      body{
+        background-color:#fff;
+      }
+
+      /*
+      #home{
+        width:800px;
+        height:500px;
+        margin:0 auto;
+        background-color:black;
+      }
+      */
+
+      header{
+        margin:50px 0;
+        text-align: center;
+      }
+
+      .top_image{
+        width:80%;
+      }
+
+      #start{
+        width:300px;
+        height:100px;
+        margin:0 auto;
+        border-radius:50px;
+        background-color:aqua;
+        text-align:center;
+        font-size:40px;
+      }
+
+      #move{
+        height:50px;
+        padding:25px;
+      }
+
+      #move a{
+        text-decoration:none;
+        color:white;
+        font-weight:bold;
+      }
+
     </style>
 </head>
 <body>
-    <div id="wrapper">
+  <header>
     <!--スライドショー-->
+    <div id="">
+      <img src="img/room002.png" class="top_image"></img>
+    </div>
+  </header>
+
+  <div id="wrapper">
+    <!--
     <div id="home">
     </div>
-    
+  -->
     <div id="start">
       <div id="move">
         <a href="senntaku.html">START</a>
       </div>
     </div>
-    
-    </div>
+  </div>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery.smint.js"></script>
+  <script src="js/slimbox.js"></script>
+  <script type="text/javascript">
+  //ナビゲーション設定
+  $(document).ready( function() {
+    $('.navigation').smint({
+      'scrollSpeed' : 1000
+    });
+  });
+
+  //スライド設定
+  function slideSwitch() {
+    var $active = $('#slideshow IMG.active');
+    if ( $active.length == 0 ) $active = $('#slideshow IMG:last');
+    var $next =  $active.next().length ? $active.next()
+    : $('#slideshow IMG:first');
+    $active.addClass('last-active');
+    $next.css({opacity: 0.0})
+    .addClass('active')
+    .animate({opacity: 1.0}, 1000, function() {
+      $active.removeClass('active last-active');
+    });
+  }
+
+  $(function() {
+    setInterval( "slideSwitch()", 5000 );
+  });
+
+  $(document).ready(function() {
+    $('a[rel*=lightbox]').slimbox();
+  });
+  </script>
 </body>
 </html>
