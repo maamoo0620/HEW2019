@@ -65,3 +65,12 @@ body {
     left: 770px;
     z-index: 100000000000;
 }
+
+/*メニューバー-----------------------*/
+#menu{
+    width:800px;
+    margin:0 auto;
+    height:40px;
+    background-color:gray;
+    padding-bottom:10px;
+}
