@@ -23,9 +23,28 @@ $(function(){
 
 
 <title>ホーム</title>
+<style>
+#back{
+    position:absolute;
+    bottom:0;
+    left:20px;
+}
+#back img{
+    border-radius:10px;
+    box-shadow: 0 5px 2px rgba(0,0,0, .2);
+    width:50px;
+    cursor: pointer;
+}
+#back img:hover{
+    opacity:0.7;
+}
+</style>
 </head>
 
 <body>
+    <div id="wrapper">
+
+    
     <div class="link1">
         <a href="ichiran.html"></a>
     </div>
@@ -53,7 +72,14 @@ $(function(){
                     class="example3" width="50" height="50"></a>
         <a href="tabemono_ehon.html"><img src="./images/sweets_shortcake02.png" alt="" 
                     class="example3" width="50" height="50"></a>
-    </div>   
+    </div>
+      
+    <div id="back">
+        <img src="images/Logo/back.png" onclick="history.back()">
+    </div>
+
+    
+</div>
 </body>
 </html>
 

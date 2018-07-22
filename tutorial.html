@@ -3,6 +3,7 @@
 <head>
 <meta charset='utf-8'>
 <title></title>
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" media="all">
 <style>
 body{
   margin:0 auto;
@@ -29,8 +30,11 @@ nav{
 #menu_wrapper{
   background-color:silver;
 }
-
-#menu{
+@media screen and (max-width:720px) { 
+  
+}
+@media screen and (min-width:720px){
+  #menu{
     padding-left:20px;
     padding-top:12.5px;
     width:480px;
@@ -38,64 +42,64 @@ nav{
     height:40px;
     border-top-left-radius: 25px;
     border-top-right-radius: 25px;
-}
-#menu a{
-  float: left;
-  list-style:none;
-  padding-right:10px;
-}
-#menu a:hover{
-  opacity:0.5;
-}
-#menu img{
-  width:80px;
-}
-#screen{
+  }
+  #menu a{
+    float: left;
+    list-style:none;
+    padding-right:10px;
+  }
+  #menu a:hover{
+    opacity:0.5;
+  }
+  #menu img{
+    width:80px;
+  }
+  
+  #screen{
     position:relative;
     width:100%;
-    height:500px;
     padding-top:50px;
-}
-#search ul{
-  overflow: hidden;
-}
-#search li{
-  width:50%;
-  float:left;
-  text-align: center;
-  list-style: none;
-}
-#search a{
-  display: block;
-  margin: 0 auto 10px;
-  width: 80%;
-  height: 44px;
-  line-height: 44px;
-  background: color: #FFF;
-  border: 1px solid #CCC;
-  border-radius: 5px;
-  box-shadow: 0 5px 10px rgba(0,0,0, .2);
-  color: #957255;
-}
-#search a:hover{
-  opacity:0.8;
-  box-shadow: none;
-  transform: translate3d(0, 3px, 0);
-}
-#back{
+    height:500px;
+  }
+  #message{
+    width:100px;
+    margin: 0 auto;
+    font-size:25px;
+  }
+  #contents{
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    width:720px;
+  }
+  .step{
+    width: 200px;
+    height: 200px;
+    float: left;
+    background-color: aqua;
+    margin-top:20px;
+    margin-left:10px;
+    margin-right:20px;
+    text-align: center;
+  }
+  .step1,.step2{
+    margin-right: 30px;
+  }
+  #back{
     position:absolute;
     bottom:0;
     left:20px;
-}
-#back img{
+  }
+  #back img{
     border-radius:10px;
     box-shadow: 0 5px 2px rgba(0,0,0, .2);
     width:50px;
     cursor: pointer;
-}
-#back img:hover{
+  }
+  #back img:hover{
     opacity:0.7;
     transform: translate3d(0, 3px, 0);
+  }
 }
 </style>
 </head>
@@ -123,10 +127,24 @@ nav{
     </nav>
     
     <div id="screen">
-    <ul id="search">
-      <li><a href="ichiran.html">一覧から探す</a></li>
-      <li><a href="genre.html">ジャンルから探す</a></li>
-    </ul>
+      <div id="message">
+        ようこそ!
+      </div>
+      <div id="contents">
+        <div class="step step1">
+          <h2>STEP1</h2>
+          <p>チュートリアル</p>
+          <p>サイトの使用方法</p>
+        </div>
+        <div class="step step2">
+          <h2>STEP2</h2>
+          <p>子供用サイトとは!</p>
+        </div>
+        <div class="step">
+          <h2>STEP3</h2>
+          <p>子供用アカウントを作ろう</p>
+        </div>
+      </div>
     
     <div id="back">
         <img src="images/Logo/back.png" onclick="history.back()">

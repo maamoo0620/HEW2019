@@ -3,6 +3,7 @@
 <head>
 <meta charset='utf-8'>
 <title></title>
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" media="all">
 <style>
 body{
   margin:0 auto;
@@ -55,6 +56,11 @@ nav{
     width:100%;
     height:500px;
     padding-top:50px;
+}
+#message{
+    width:200px;
+    margin: 0 auto;
+    font-size:25px;
 }
 #search ul{
   overflow: hidden;
@@ -123,10 +129,11 @@ nav{
     </nav>
     
     <div id="screen">
-    <ul id="search">
-      <li><a href="ichiran.html">一覧から探す</a></li>
-      <li><a href="genre.html">ジャンルから探す</a></li>
-    </ul>
+      <div id="contents">
+        <div id="message">
+          ジャンルから探す
+        </div>
+      </div>
     
     <div id="back">
         <img src="images/Logo/back.png" onclick="history.back()">
