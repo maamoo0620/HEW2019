@@ -1,0 +1,104 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/jquery.skippr.css">
+<script src="js/jquery-1.11.0.min.js"></script>
+<script src="js/jquery.skippr.js"></script>
+<title></title>
+</head>
+<body>
+  <style>
+  @charset "UTF-8";
+  *{
+    /* 全ての要素に対して反映される リセット */
+    margin:0;
+    padding:0;
+    outline:0;
+  }
+  html{
+    font-size: 62.5%; /* 10px */
+  }
+  @import url(https://fonts.googleapis.com/css?family=Lato:400,700);
+  @import url(http://fonts.googleapis.com/earlyaccess/notosansjp.css);
+  body {
+      font-family: Lato, "Noto Sans JP", "游ゴシック Medium", "游ゴシック体", "Yu Gothic Medium", YuGothic, "ヒラギノ角ゴ ProN", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+  }
+  h1{
+    font-size: 8rem;
+  }
+  p{
+    font-size: 3rem;
+  }
+  .bg_fixed1 {
+  	height: 600px;
+  	background-image: url('img/room002.png');
+  	background-size: cover;
+  	background-attachment: fixed;
+  	background-repeat: no-repeat;
+  	background-position: center center;
+  	z-index: 1;
+  }
+  .bg_fixed2 {
+  	height: 600px;
+  	background-image: url('img/img001.jpg');
+  	background-size: cover;
+  	background-attachment:fixed;
+  	background-repeat: no-repeat;
+  	background-position: center center;
+  	z-index: 1;
+  }
+  .scroll {
+  	height: 600px;
+    width:auto;
+    padding:50px 100px;
+  	background-color: #6f0;
+  	z-index: 2;
+  }
+  #start{
+    width:300px;
+    height:100px;
+    margin:100px auto 0;
+    border-radius:50px;
+    background-color:#fff;
+    text-align:center;
+    font-size:40px;
+  }
+  #move{
+    height:50px;
+    padding:25px;
+  }
+  #move a{
+    text-decoration:none;
+    color:#0f0;
+    font-weight:bold;
+  }
+  </style>
+
+	<div class="bg_fixed1"></div>
+
+	<div class="scroll">
+    <h1>えほんの森</h1>
+    <p>えほんの森は<strong>"子どものための初めてのショッピングサイト"</strong>をコンセプトに<br>
+      安心安全かつ操作方法を学び知識を深めることを目的に制作されました。
+    </p>
+  </div>
+
+	<div class="bg_fixed2"></div>
+
+	<div class="scroll">
+    <p>えほんの森の使い方</p>
+    <p><strong>step1</strong> : 保護者アカウントを登録します</p>
+    <p><strong>step2</strong> : 子どもアカウントを登録(複数人可)します</p>
+    <p><strong>step3</strong> : 子どもは読みたいえほんを見つけたら欲しいものリストへ入れます</p>
+    <p><strong>step4</strong> : 子どもは欲しいものリストの中身のランキングを決めます</p>
+    <p><strong>step5</strong> : 保護者は欲しいものリストを元に購入を検討します</p>
+    <div id="start">
+      <div id="move">
+        <a href="select_02.html">START</a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
