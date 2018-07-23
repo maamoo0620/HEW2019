@@ -4,27 +4,29 @@
   <meta charset='utf-8'>
   <title></title>
 <style>
+body{
+  background-image: url('img/room002.png');
+}
   .wrapper{
 
   }
   #contents{
-    width:900px;
+    width:690px;
     height:50px;
+    margin: 0 auto;
   }
   .tickets{
-   margin-top:50px;
-   margin-left:50px;
-   width:350px;
-   height:200px;
-   background-color:gray;
-   margin-right:20px;
-   float: left;
+   margin:25px 0 25px;
+   width:690px;
+   height:150px;
+   background-color:#6f0;
+   clear:both;
    cursor: pointer;
    position: relative;
   }
   .tickets input[type="text"],[type="textarea"]{
     top:20px;
-    left:20px;
+    left:100px;
     position: absolute;
     font-size:20px;
     width:200px;
@@ -35,7 +37,7 @@
     height: 75px;
     background: white;
     position: absolute;
-    right: 20px;
+    left: 20px;
     top:20px;
   }
   .tickets img{
@@ -54,7 +56,7 @@
     height: 0;
     border-style: solid;
     border-width: 50px 0 0 50px;
-    border-color: transparent transparent transparent white;
+    border-color: transparent transparent transparent rgba(0,0,0,0.3);
     cursor: default;
     position: absolute;
     bottom:0;
@@ -68,6 +70,19 @@
 
     </div>
     <div id="contents">
+      <a href="search.html">
+      <div class="tickets">
+        <input type="textarea" value="ゲストさん" disabled="disabled">
+        <div class="image_wrapper">
+        <img src="images/Logo/user.svg">
+        </div>
+        <div>
+          <button>ログイン</button>
+        </div>
+        <div id="triangle">
+        </div>
+      </div>
+      </a>
       <a href="new_acount_03.html">
       <div class="tickets">
         <input type="textarea" value="新規アカウント作成" disabled="disabled">
@@ -84,19 +99,6 @@
       <a href="login_08.html">
       <div class="tickets">
         <input type="textarea" value="USERNAME" disabled="disabled">
-        <div class="image_wrapper">
-        <img src="images/Logo/user.svg">
-        </div>
-        <div>
-          <button>ログイン</button>
-        </div>
-        <div id="triangle">
-        </div>
-      </div>
-      </a>
-      <a href="search.html">
-      <div class="tickets">
-        <input type="textarea" value="ゲストさん" disabled="disabled">
         <div class="image_wrapper">
         <img src="images/Logo/user.svg">
         </div>
