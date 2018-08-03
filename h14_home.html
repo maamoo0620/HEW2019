@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="css/style.css">
+<script src="js/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+<script type="text/javascript">
+$(function(){
+    var setImg = '#viewer';
+    var fadeSpeed = 1800;
+    var switchDelay = 200;
+
+    $(setImg).children('img').css({opacity:'0'});
+    $(setImg + ' img:first').stop().animate({opacity:'1',zIndex:'20'},fadeSpeed);
+
+    setInterval(function(){
+        $(setImg + ' :first-child').animate({opacity:'0'},fadeSpeed).next('img').animate({opacity:'1'},fadeSpeed).end().appendTo(setImg);
+    },switchDelay);
+});
+</script>
+<title>ホーム</title>
+<style>
+#back{
+    position:absolute;
+    bottom:0;
+    left:20px;
+}
+#back img{
+    border-radius:10px;
+    box-shadow: 0 5px 2px rgba(0,0,0, .2);
+    width:50px;
+    cursor: pointer;
+}
+#back img:hover{
+    opacity:0.7;
+}
+</style>
+</head>
+<body>
+<div id="wrapper">
+  <div class="link1">
+    <a href="ichiran.html"></a>
+  </div>
+	<div id="viewer">
+    <a href="ichiran.html"><img src="./images/illustrain01-hondana.png" alt="" class="example1" width="150" height="200"></a>
+    <a href="ichiran.html"><img src="./images/illustrain03-hondana.png" alt="" class="example1" width="150" height="200"></a>
+	</div>
+  <div class="link2">
+    <a href="husigi_ehon.html"></a>
+  </div>
+  <div id="viewer">
+      <a href="husigi_ehon.html"><img src="./images/bijutsu_art_paint01.png" alt="" class="example2" width="100" height="110"></a>
+      <a href="husigi_ehon.html"><img src="./images/bijutsu_art_paint02.png" alt="" class="example2" width="100" height="110"></a>
+  </div>
+  <div id="table">
+      <img src="./images/table.gif" alt="" width="220" height="200">
+  </div>
+  <div class="link3">
+      <a href="tabemono_ehon.html"></a>
+  </div>
+  <div id="viewer">
+      <a href="tabemono_ehon.html"><img src="./images/sweets_shortcake01.png" alt="" class="example3" width="50" height="50"></a>
+      <a href="tabemono_ehon.html"><img src="./images/sweets_shortcake02.png" alt="" class="example3" width="50" height="50"></a>
+  </div>
+  <div id="back">
+      <img src="images/Logo/back.png" onclick="history.back()">
+  </div>
+</div>
+</body>
+</html>
