@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='utf-8'>
+<title></title>
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" media="all">
+<style>
+body{
+  margin:0 auto;
+}
+nav{
+  background-color: blue;
+}
+#title_wrapper{
+  width: 140px;
+  background-color:aqua;
+  margin:0 auto;
+  padding:0 20px;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+}
+#title_wrapper img{
+  width: 140px;
+}
+
+#title_wrapper a:hover{
+  opacity:0.5;
+}
+
+#menu_wrapper{
+  background-color:silver;
+}
+
+#menu{
+    padding-left:20px;
+    padding-top:12.5px;
+    width:480px;
+    margin:0 auto;
+    height:40px;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+}
+#menu a{
+  float: left;
+  list-style:none;
+  padding-right:10px;
+}
+#menu a:hover{
+  opacity:0.5;
+}
+#menu img{
+  width:80px;
+}
+#screen{
+    position:relative;
+    width:100%;
+    height:500px;
+    padding-top:50px;
+}
+#message{
+    width:200px;
+    margin: 0 auto;
+    font-size:25px;
+}
+#search ul{
+  overflow: hidden;
+}
+#search li{
+  width:50%;
+  float:left;
+  text-align: center;
+  list-style: none;
+}
+#search a{
+  display: block;
+  margin: 0 auto 10px;
+  width: 80%;
+  height: 44px;
+  line-height: 44px;
+  background: color: #FFF;
+  border: 1px solid #CCC;
+  border-radius: 5px;
+  box-shadow: 0 5px 10px rgba(0,0,0, .2);
+  color: #957255;
+}
+#search a:hover{
+  opacity:0.8;
+  box-shadow: none;
+  transform: translate3d(0, 3px, 0);
+}
+#back{
+    position:absolute;
+    bottom:0;
+    left:20px;
+}
+#back img{
+    border-radius:10px;
+    box-shadow: 0 5px 2px rgba(0,0,0, .2);
+    width:50px;
+    cursor: pointer;
+}
+#back img:hover{
+    opacity:0.7;
+    transform: translate3d(0, 3px, 0);
+}
+</style>
+</head>
+<body>
+<div id="wrapper">
+    <nav>
+    <div id="title_wrapper">
+    <a href="home.html">
+      <img src="images/Logo/title2.png" id="title">
+    </a>
+    </div>
+    <div id="menu_wrapper">
+    <div id="menu">
+          <a href="ichiran.html">
+            <img src="images/Logo/iti.png">
+          </a>
+          <a href="genre.html">
+            <img src="images/Logo/gen.png">
+          </a>
+          <a href="#"><img src="images/Logo/okini.png"></a>
+          <a href="#"><img src="images/Logo/user.png"></a>
+          <a href="logout.html"><img src="images/Logo/logoff.png"></a>
+    </div>
+    </div>
+    </nav>
+    
+    <div id="screen">
+      <div id="contents">
+        <div id="message">
+          ジャンルから探す
+        </div>
+      </div>
+    
+    <div id="back">
+        <img src="images/Logo/back.png" onclick="history.back()">
+    </div>
+    
+    </div>
+    
+</div>
+</body>
+</html>
