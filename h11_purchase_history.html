@@ -1,3 +1,4 @@
+<!--画面一覧とは矛盾しますがh11は保護者が購入履歴を確認するページにします-->
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,7 +8,7 @@
 <script src="js/jquery.skippr.js"></script>
 <link rel="stylesheet" href="css/sanitize.css">
 <link rel="stylesheet" href="css/slimbox.css">
-<title>h09_index.html</title>
+<title>h11_purchase_history.html</title>
 <script>
 /*----------------------------------------------------------------------*/
 /* sp_nav_menu
@@ -179,15 +180,19 @@ body {
   right:50px;
   top:25px;
 }
-.search_book form input{
-  width:250px;
-  height:24px;
-  border-radius: 3px;
+.children{
+  position: absolute;
+  right:50px;
+  top:25px;
 }
-.search_book form button{
-  width:50px;
-  height:25px;
-  border-radius: 3px;
+.children a{
+  font-size: 2rem;
+  color:#555;
+  text-decoration: none;
+  margin:0 10px;
+}
+.children a:hover{
+  color:#000;
 }
 html{
     overflow: auto;
@@ -199,104 +204,66 @@ body{
     width: 100%;
     height: 100%;
     padding:50px 0 0 ;
-    overflow-x:hidden;
 }
-
-.bg_fixed {
-  margin:50px 0 0;
-  width:100%;
-  height: 400px;
-  background-color: #fff;
-  background-size: cover;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-position: center center;
-  z-index: 1;
-}
-.new_list{
+.name{
+  margin:50px 0 0 50px;
   font-size: 3rem;
-  color:#000;
-  margin:0 0 0 10%;
 }
-.new_list:hover{
-  color:#888;
+.sort_area{
+  position: absolute;
+  top:0;
+  right:0;
+  float:right;
+  width:50%;
+  height:100px;
 }
-.list{
-  width:80%;
-  height:300px;
-  padding:20px;
-  margin:0 auto;
-  border:solid 1px #ccc;
-  background-color: #fff;
-  white-space:nowrap;
-  overflow: scroll;
-}
-.list a img{
-  width:200px;
-  height:280px;
-  float:left;
-  margin:0 0 20px 20px;
-}
-
-.scroll {
-  margin:50px 0 0;
-  padding:50px 0;
-  width:100%;
-  height: 400px;
-  background-color: #6f0;
-  z-index: 2;
-}
-.genre_title{
-  font-size: 3rem;
-  color:#000;
-  margin:0 0 0 10%;
+.sort_area select{
+  width:100px;
+  font-size: 1.5rem;
+  border-radius: 3px;
   float:left;
 }
-.genre_area{
-  clear:both;
-}
-.genre_btn{
-  width:260px;
-  height:260px;
-  margin:50px;
+.sort_btn{
+  height:20px;
+  width:auto;
+  padding:5px;
+  border-radius: 3px;
+  border:solid 1px;
+  margin:0 0 0 20px;
   float:left;
-  border-radius: 130px;
-  background:#f00;
 }
-.genre_btn a{
-  display: block;
-  width:100%;
-  height:100%;
-  color:#fff;
-  font-weight:bold;
-  font-size: 3rem;
+.sort_btn a{
+  font-size: 1.5rem;
   text-decoration: none;
-  text-align: center;
-  margin:100px 0 0;
+  color:#000;
 }
-.genre01{
-  background-color: #00ff3b;
+.sort_btn:hover{
+  background-color:#6f0;
+  color:#fff;
 }
-.genre02{
-  background-color: #0ee;
+.purchase_list{
+  width:80%;
+  height:500px;
+  padding:5%;
+  margin:50px auto 0;
+  border:solid 1px;
+  font-size: 1.5rem;
 }
-.genre03{
-  background-color: #b6ff01;
+.purchase_list dl{
+  border-bottom:dotted 1px;
+  height:30px;
+  text-align: left;
 }
-.genre04{
-  background-color: #8a2be2;
+.purchase_list dl dt{
+  clear: both;
+  float:left;
+  width:15%;
+  margin:0 0 5px 5%;
 }
-.genre05{
-  background-color: #e00;
-}
-.genre06{
-  background-color: #ee0;
-}
-.genre07{
-  background-color: #00e;
-}
-.genre08{
-  background-color: #ff4f02;
+.purchase_list dl dd{
+  float:left;
+  width:15%;
+  margin:0 0 5px 5%;
 }
 #back{
     position:absolute;
@@ -320,6 +287,11 @@ body{
   <div class="l_nav">
       <nav class="nav">
           <ul class="nav_menu">
+            <li>
+                <div class="nav_list_inner">
+                    <a href="h09_index.html">トップページ</a>
+                </div>
+            </li>
               <li>
                   <div class="nav_list_inner">
                       <a href="#">おすすめ</a>
@@ -352,7 +324,7 @@ body{
               </li>
               <li>
                   <div class="nav_list_inner">
-                      <a href="h11_purchase_history.html">購入履歴</a>
+                      <a href="#">購入履歴</a>
                   </div>
               </li>
               <li>
@@ -378,63 +350,61 @@ body{
                 <p>絵本の森</p>
             </div>
         </div>
-        <div class="search_book">
-          <form action="h16_search_result.html">
-            <input type="text" placeholder="キーワードを入力してください">
-            <button type="submit">検索</button>
-          </form>
-        </div>
     </div>
-    <div class="bg_fixed">
-      <a href="#" class="new_list">最新おすすめ一覧>></a>
-      <div class="list">
-        <a href=""><img src="img/book001.jpg"></a>
-        <a href=""><img src="img/book002.jpg"></a>
-        <a href=""><img src="img/book003.jpg"></a>
-        <a href=""><img src="img/book004.jpg"></a>
-        <a href=""><img src="img/book005.jpg"></a>
-        <a href=""><img src="img/book006.jpg"></a>
-        <a href=""><img src="img/book007.jpg"></a>
-        <a href=""><img src="img/book008.jpg"></a>
-        <a href=""><img src="img/book009.jpg"></a>
-        <a href=""><img src="img/book010.jpg"></a>
-      </div>
+    <p class="name">購入履歴</p>
+    <div class="sort_area">
+      <select name="example">
+      <option value="1" selected="selected">すべて</option>
+      <option value="2">はやおくん</option>
+      <option value="3">けいたくん</option>
+      <option value="3">まもるくん</option>
+      <option value="3">りょうくん</option>
+      </select>
+      <div class="sort_btn"><a href="#">50音順</a></div>
+      <div class="sort_btn"><a href="#">アルファベット順</a></div>
+      <div class="sort_btn"><a href="#">高い順</a></div>
+      <div class="sort_btn"><a href="#">安い順 </a></div>
+      <div class="sort_btn"><a href="#">新しい順</a></div>
+      <div class="sort_btn"><a href="#">古い順</a></div>
     </div>
 
-    <div class="scroll">
-      <a href="#" class="new_list">全ての絵本>></a>
-      <div class="list">
-        <a href=""><img src="img/book001.jpg"></a>
-        <a href=""><img src="img/book002.jpg"></a>
-        <a href=""><img src="img/book003.jpg"></a>
-        <a href=""><img src="img/book004.jpg"></a>
-        <a href=""><img src="img/book005.jpg"></a>
-        <a href=""><img src="img/book006.jpg"></a>
-        <a href=""><img src="img/book007.jpg"></a>
-        <a href=""><img src="img/book008.jpg"></a>
-        <a href=""><img src="img/book009.jpg"></a>
-        <a href=""><img src="img/book010.jpg"></a>
-      </div>
+    <div class="purchase_list">
+      <dl>
+        <dt>日時</dt>
+        <dd>単価</dd>
+        <dd>冊数</dd>
+        <dd>合計</dd>
+        <dd>タイトル</dd>
+      </dl>
+      <dl>
+        <dt>2018/XX/XX</dt>
+        <dd>￥999</dd>
+        <dd>1</dd>
+        <dd>￥999</dd>
+        <dd>こうじげんば</dd>
+      </dl>
+      <dl>
+        <dt>2018/XX/XX</dt>
+        <dd>￥999</dd>
+        <dd>1</dd>
+        <dd>￥999</dd>
+        <dd>おまえ うまそうだな</dd>
+      </dl>
+      <dl>
+        <dt>2018/XX/XX</dt>
+        <dd>￥999</dd>
+        <dd>1</dd>
+        <dd>￥999</dd>
+        <dd>かえるのおでかけ</dd>
+      </dl>
+      <dl>
+        <dt>2018/XX/XX</dt>
+        <dd>￥999</dd>
+        <dd>1</dd>
+        <dd>￥999</dd>
+        <dd>てぶくろ</dd>
+      </dl>
     </div>
-    <div class="bg_fixed">
-      <a href="h18_genre.html" class="genre_title">ジャンル一覧>></a>
-      <div class="genre_area">
-        <div class="genre_btn genre01"><a href="h18_genre.html">おはな</a></div>
-        <div class="genre_btn genre02"><a href="h18_genre.html">のりもの</a></div>
-        <div class="genre_btn genre03"><a href="h18_genre.html">おばけ<br>ようかい</a></div>
-        <div class="genre_btn genre04"><a href="h18_genre.html">たべもの</a></div>
-        <div class="genre_btn genre05"><a href="h18_genre.html">ことば<br>かず</a></div>
-        <div class="genre_btn genre06"><a href="h18_genre.html">どうぶつ</a></div>
-        <div class="genre_btn genre07"><a href="h18_genre.html">ともだち</a></div>
-        <div class="genre_btn genre08"><a href="h18_genre.html">がっこう</a></div>
-      </div>
-    </div>
-    <div class="bg_fixed2"></div>
-
-    <div class="l_footer">
-
-    </div>
-  </div>
   <div id="back">
       <img src="images/Logo/back.png" onclick="history.back()">
   </div>

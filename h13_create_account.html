@@ -7,7 +7,7 @@
 <script src="js/jquery.skippr.js"></script>
 <link rel="stylesheet" href="css/sanitize.css">
 <link rel="stylesheet" href="css/slimbox.css">
-<title>h09_index.html</title>
+<title>h13_create_account.html</title>
 <script>
 /*----------------------------------------------------------------------*/
 /* sp_nav_menu
@@ -179,15 +179,19 @@ body {
   right:50px;
   top:25px;
 }
-.search_book form input{
-  width:250px;
-  height:24px;
-  border-radius: 3px;
+.children{
+  position: absolute;
+  right:50px;
+  top:25px;
 }
-.search_book form button{
-  width:50px;
-  height:25px;
-  border-radius: 3px;
+.children a{
+  font-size: 2rem;
+  color:#555;
+  text-decoration: none;
+  margin:0 10px;
+}
+.children a:hover{
+  color:#000;
 }
 html{
     overflow: auto;
@@ -199,104 +203,54 @@ body{
     width: 100%;
     height: 100%;
     padding:50px 0 0 ;
-    overflow-x:hidden;
 }
-
-.bg_fixed {
-  margin:50px 0 0;
-  width:100%;
-  height: 400px;
-  background-color: #fff;
-  background-size: cover;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-position: center center;
-  z-index: 1;
-}
-.new_list{
+.name{
+  margin:50px 0 0 50px;
   font-size: 3rem;
-  color:#000;
-  margin:0 0 0 10%;
 }
-.new_list:hover{
-  color:#888;
+.create_form{
+  width:600px;
+  margin:50px auto 0;
+  font-size: 2rem;
 }
-.list{
-  width:80%;
-  height:300px;
-  padding:20px;
-  margin:0 auto;
-  border:solid 1px #ccc;
-  background-color: #fff;
-  white-space:nowrap;
-  overflow: scroll;
-}
-.list a img{
+.left_form{
   width:200px;
-  height:280px;
-  float:left;
-  margin:0 0 20px 20px;
-}
-
-.scroll {
-  margin:50px 0 0;
-  padding:50px 0;
-  width:100%;
-  height: 400px;
-  background-color: #6f0;
-  z-index: 2;
-}
-.genre_title{
-  font-size: 3rem;
-  color:#000;
-  margin:0 0 0 10%;
-  float:left;
-}
-.genre_area{
   clear:both;
-}
-.genre_btn{
-  width:260px;
-  height:260px;
-  margin:50px;
   float:left;
-  border-radius: 130px;
-  background:#f00;
+  text-align: right;
 }
-.genre_btn a{
-  display: block;
-  width:100%;
-  height:100%;
-  color:#fff;
-  font-weight:bold;
-  font-size: 3rem;
-  text-decoration: none;
-  text-align: center;
-  margin:100px 0 0;
+.right_form{
+  width:370px;
+  height:50px;
+  margin: 0 0 0 30px;
+  float:left;
 }
-.genre01{
-  background-color: #00ff3b;
+.right_form input{
+  width:300px;
+  height:30px;
+  border-radius:5px;
+  box-shadow:0 0 -5px  0 ;
+  background-color:#ddd;
 }
-.genre02{
-  background-color: #0ee;
+select{
+  font-size: 2rem;
+  border-radius: 5px;
 }
-.genre03{
-  background-color: #b6ff01;
+.year{
+  width:100px;
 }
-.genre04{
-  background-color: #8a2be2;
+.month, .day{
+  width:60px;
 }
-.genre05{
-  background-color: #e00;
-}
-.genre06{
-  background-color: #ee0;
-}
-.genre07{
-  background-color: #00e;
-}
-.genre08{
-  background-color: #ff4f02;
+.right_form button{
+  position:relative;
+  left:400px;
+  width:100px;
+  height:40px;
+  border-radius: 10px;
+  font-size: 2rem;
+  font-weight: 550;
+  background-color: #ddd;
 }
 #back{
     position:absolute;
@@ -320,6 +274,11 @@ body{
   <div class="l_nav">
       <nav class="nav">
           <ul class="nav_menu">
+            <li>
+                <div class="nav_list_inner">
+                    <a href="h09_index.html">トップページ</a>
+                </div>
+            </li>
               <li>
                   <div class="nav_list_inner">
                       <a href="#">おすすめ</a>
@@ -342,7 +301,7 @@ body{
               </li>
               <li>
                   <div class="nav_list_inner">
-                      <a href="h12_add_change.html">ユーザ登録/変更</a>
+                      <a href="#">ユーザ登録/変更</a>
                   </div>
               </li>
               <li>
@@ -352,7 +311,7 @@ body{
               </li>
               <li>
                   <div class="nav_list_inner">
-                      <a href="h11_purchase_history.html">購入履歴</a>
+                      <a href="h11h11_purchase_history">購入履歴</a>
                   </div>
               </li>
               <li>
@@ -378,63 +337,91 @@ body{
                 <p>絵本の森</p>
             </div>
         </div>
-        <div class="search_book">
-          <form action="h16_search_result.html">
-            <input type="text" placeholder="キーワードを入力してください">
-            <button type="submit">検索</button>
-          </form>
-        </div>
     </div>
-    <div class="bg_fixed">
-      <a href="#" class="new_list">最新おすすめ一覧>></a>
-      <div class="list">
-        <a href=""><img src="img/book001.jpg"></a>
-        <a href=""><img src="img/book002.jpg"></a>
-        <a href=""><img src="img/book003.jpg"></a>
-        <a href=""><img src="img/book004.jpg"></a>
-        <a href=""><img src="img/book005.jpg"></a>
-        <a href=""><img src="img/book006.jpg"></a>
-        <a href=""><img src="img/book007.jpg"></a>
-        <a href=""><img src="img/book008.jpg"></a>
-        <a href=""><img src="img/book009.jpg"></a>
-        <a href=""><img src="img/book010.jpg"></a>
+    <p class="name">子ども情報登録</p>
+    <form class="create_form">
+      <div class="left_form"><p>ニックネーム</p></div>
+      <div class="right_form">
+        <input type="text" name="" value="">
       </div>
-    </div>
-
-    <div class="scroll">
-      <a href="#" class="new_list">全ての絵本>></a>
-      <div class="list">
-        <a href=""><img src="img/book001.jpg"></a>
-        <a href=""><img src="img/book002.jpg"></a>
-        <a href=""><img src="img/book003.jpg"></a>
-        <a href=""><img src="img/book004.jpg"></a>
-        <a href=""><img src="img/book005.jpg"></a>
-        <a href=""><img src="img/book006.jpg"></a>
-        <a href=""><img src="img/book007.jpg"></a>
-        <a href=""><img src="img/book008.jpg"></a>
-        <a href=""><img src="img/book009.jpg"></a>
-        <a href=""><img src="img/book010.jpg"></a>
+      <div class="left_form">生年月日</div>
+      <div class="right_form">
+        <select class="year" name="">
+          <option value="" selected="selected">2000</option>
+          <option value="">2001</option>
+          <option value="">2002</option>
+          <option value="">2003</option>
+          <option value="">2004</option>
+          <option value="">2005</option>
+          <option value="">2006</option>
+          <option value="">2007</option>
+          <option value="">2008</option>
+          <option value="">2009</option>
+          <option value="">2010</option>
+          <option value="">2011</option>
+          <option value="">2012</option>
+          <option value="">2013</option>
+          <option value="">2014</option>
+          <option value="">2015</option>
+          <option value="">2016</option>
+          <option value="">2017</option>
+          <option value="">2018</option>
+          <option value="">2019</option>
+        </select>年
+        <select class="month" name="">
+          <option value="" selected="selected">1</option>
+          <option value="">2</option>
+          <option value="">3</option>
+          <option value="">4</option>
+          <option value="">5</option>
+          <option value="">6</option>
+          <option value="">7</option>
+          <option value="">8</option>
+          <option value="">9</option>
+          <option value="">10</option>
+          <option value="">11</option>
+          <option value="">12</option>
+        </select>月
+        <select class="day" name="">
+          <option value="" selected="selected">1</option>
+          <option value="">2</option>
+          <option value="">3</option>
+          <option value="">4</option>
+          <option value="">5</option>
+          <option value="">6</option>
+          <option value="">7</option>
+          <option value="">8</option>
+          <option value="">9</option>
+          <option value="">10</option>
+          <option value="">11</option>
+          <option value="">12</option>
+          <option value="">13</option>
+          <option value="">14</option>
+          <option value="">15</option>
+          <option value="">16</option>
+          <option value="">17</option>
+          <option value="">18</option>
+          <option value="">19</option>
+          <option value="">20</option>
+          <option value="">21</option>
+          <option value="">22</option>
+          <option value="">23</option>
+          <option value="">24</option>
+          <option value="">25</option>
+          <option value="">26</option>
+          <option value="">27</option>
+          <option value="">28</option>
+          <option value="">29</option>
+          <option value="">30</option>
+          <option value="">31</option>
+        </select>日
       </div>
-    </div>
-    <div class="bg_fixed">
-      <a href="h18_genre.html" class="genre_title">ジャンル一覧>></a>
-      <div class="genre_area">
-        <div class="genre_btn genre01"><a href="h18_genre.html">おはな</a></div>
-        <div class="genre_btn genre02"><a href="h18_genre.html">のりもの</a></div>
-        <div class="genre_btn genre03"><a href="h18_genre.html">おばけ<br>ようかい</a></div>
-        <div class="genre_btn genre04"><a href="h18_genre.html">たべもの</a></div>
-        <div class="genre_btn genre05"><a href="h18_genre.html">ことば<br>かず</a></div>
-        <div class="genre_btn genre06"><a href="h18_genre.html">どうぶつ</a></div>
-        <div class="genre_btn genre07"><a href="h18_genre.html">ともだち</a></div>
-        <div class="genre_btn genre08"><a href="h18_genre.html">がっこう</a></div>
+      <div class="left_form">
       </div>
-    </div>
-    <div class="bg_fixed2"></div>
-
-    <div class="l_footer">
-
-    </div>
-  </div>
+      <div class="right_form">
+        <button type="submit" name="" value="">確定</button>
+      </div>
+    </form>
   <div id="back">
       <img src="images/Logo/back.png" onclick="history.back()">
   </div>
