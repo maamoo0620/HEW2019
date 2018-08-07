@@ -1,95 +1,74 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
+
 <head>
-<meta charset='utf-8'>
-<title></title>
-<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" media="all">
+<meta charset="UTF-8">
+<title>h16_search_result.html</title>
 <style>
+html{
+  font-size: 62.5%; /* 10px */
+}
 body{
   margin:0 auto;
 }
-nav{
-  background-color: blue;
+.title{
+  font-size: 4em;
+  position:absolute;
+  left:0;
+  top:0;
 }
-#title_wrapper{
-  width: 140px;
-  background-color:aqua;
-  margin:0 auto;
-  padding:0 20px;
-  border-top-left-radius: 25px;
-  border-top-right-radius: 25px;
+.genre_area{
+  margin:100px 0 0;
 }
-#title_wrapper img{
-  width: 140px;
-}
-
-#title_wrapper a:hover{
-  opacity:0.5;
-}
-
-#menu_wrapper{
-  background-color:silver;
-}
-
-#menu{
-    padding-left:20px;
-    padding-top:12.5px;
-    width:480px;
-    margin:0 auto;
-    height:40px;
-    border-top-left-radius: 25px;
-    border-top-right-radius: 25px;
-}
-#menu a{
-  float: left;
-  list-style:none;
-  padding-right:10px;
-}
-#menu a:hover{
-  opacity:0.5;
-}
-#menu img{
-  width:80px;
-}
-#screen{
-    position:relative;
-    width:100%;
-    height:500px;
-    padding-top:50px;
-}
-#message{
-    width:200px;
-    margin: 0 auto;
-    font-size:25px;
-}
-#search ul{
-  overflow: hidden;
-}
-#search li{
-  width:50%;
+.genre_btn{
+  width:300px;
+  height:300px;
+  margin:30px;
   float:left;
-  text-align: center;
-  list-style: none;
+  border-radius: 150px;
+  background:#f00;
 }
-#search a{
+.genre_btn a{
   display: block;
-  margin: 0 auto 10px;
-  width: 80%;
-  height: 44px;
-  line-height: 44px;
-  background: color: #FFF;
-  border: 1px solid #CCC;
-  border-radius: 5px;
-  box-shadow: 0 5px 10px rgba(0,0,0, .2);
-  color: #957255;
+  width:100%;
+  height:100%;
+  color:#fff;
+  font-weight:bold;
+  font-size: 3rem;
+  text-decoration: none;
+  text-align: center;
+  margin:20px 0 0;
 }
-#search a:hover{
-  opacity:0.8;
-  box-shadow: none;
-  transform: translate3d(0, 3px, 0);
+.genre_btn a img{
+  width:150px;
+  border-radius: 50px;
+}
+.genre01{
+  background-color: #00ff3b;
+}
+.genre02{
+  background-color: #0ee;
+}
+.genre03{
+  background-color: #b6ff01;
+}
+.genre04{
+  background-color: #8a2be2;
+}
+.genre05{
+  background-color: #e00;
+}
+.genre06{
+  background-color: #ee0;
+}
+.genre07{
+  background-color: #00e;
+}
+.genre08{
+  background-color: #ff4f02;
 }
 #back{
-    position:absolute;
+    position:fixed;
     bottom:0;
     left:20px;
 }
@@ -101,46 +80,25 @@ nav{
 }
 #back img:hover{
     opacity:0.7;
-    transform: translate3d(0, 3px, 0);
 }
 </style>
 </head>
 <body>
-<div id="wrapper">
-    <nav>
-    <div id="title_wrapper">
-    <a href="home.html">
-      <img src="images/Logo/title2.png" id="title">
-    </a>
-    </div>
-    <div id="menu_wrapper">
-    <div id="menu">
-          <a href="ichiran.html">
-            <img src="images/Logo/iti.png">
-          </a>
-          <a href="genre.html">
-            <img src="images/Logo/gen.png">
-          </a>
-          <a href="#"><img src="images/Logo/okini.png"></a>
-          <a href="#"><img src="images/Logo/user.png"></a>
-          <a href="logout.html"><img src="images/Logo/logoff.png"></a>
-    </div>
-    </div>
-    </nav>
-    
-    <div id="screen">
-      <div id="contents">
-        <div id="message">
-          ジャンルから探す
-        </div>
-      </div>
-    
-    <div id="back">
-        <img src="images/Logo/back.png" onclick="history.back()">
-    </div>
-    
-    </div>
-    
+    <p class="title">しゅるい</p>
+  <div class="genre_area">
+    <div class="genre_btn genre01"><a href="#">おはな<br><img src="img/book_genre002.png"></a></div>
+    <div class="genre_btn genre02"><a href="#">のりもの<br><img src="img/book_genre001.png"></a></div>
+    <div class="genre_btn genre03"><a href="#">おばけ<br>ようかい<br><img src="img/book_genre004.png"></a></div>
+    <div class="genre_btn genre04"><a href="#">たべもの<br><img src="img/book_genre005.png"></a></div>
+    <div class="genre_btn genre05"><a href="#">ことば<br>かず<br><img src="img/book_genre008.jpg"></a></div>
+    <div class="genre_btn genre06"><a href="#">どうぶつ<br><img src="img/book_genre003.png"></a></div>
+    <div class="genre_btn genre07"><a href="#">ともだち<br><img src="img/book_genre006.jpg"></a></div>
+    <div class="genre_btn genre08"><a href="#">がっこう<br><img src="img/book_genre007.png"></a></div>
+  </div>
+</div>
+  <div id="back">
+      <img src="images/Logo/back.png" onclick="history.back()">
+  </div>
 </div>
 </body>
 </html>

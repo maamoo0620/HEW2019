@@ -3,25 +3,49 @@
 
 <head>
 <meta charset="UTF-8">
-<link rel="stylesheet" href="css/style.css">
-<script src="js/jquery-1.11.0.min.js"></script>
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
-<script type="text/javascript">
-$(function(){
-    var setImg = '#viewer';
-    var fadeSpeed = 1800;
-    var switchDelay = 200;
-
-    $(setImg).children('img').css({opacity:'0'});
-    $(setImg + ' img:first').stop().animate({opacity:'1',zIndex:'20'},fadeSpeed);
-
-    setInterval(function(){
-        $(setImg + ' :first-child').animate({opacity:'0'},fadeSpeed).next('img').animate({opacity:'1'},fadeSpeed).end().appendTo(setImg);
-    },switchDelay);
-});
-</script>
 <title>ホーム</title>
 <style>
+body {
+  /* 画像ファイルの指定 */
+  background-image: url(img/start001.png);
+  /* 画像を常に天地左右の中央に配置 */
+  background-position: center center;
+  /* 画像をタイル状に繰り返し表示しない */
+  background-repeat: no-repeat;
+  /* コンテンツの高さが画像の高さより大きい時、動かないように固定 */
+  background-attachment: fixed;
+  /* 表示するコンテナの大きさに基づいて、背景画像を調整 */
+  background-size: cover;
+  /* 背景画像が読み込まれる前に表示される背景のカラー */
+  background-color: #464646;
+}
+.index_link{
+  position: absolute;
+  top:10px;
+  right:10px;
+}
+.index_link a{
+  text-decoration: none;
+  color:#ccc;
+}
+.start_btn{
+  width:500px;
+  height:200px;
+  margin:20% auto 0;
+  border-radius: 100px;
+  background-color: #6f0;
+  text-align: center;
+}
+.start_btn a{
+  color:#fff;
+  font-size: 3rem;
+  font-weight: bold;
+  text-decoration: none;
+  display:block;
+  width:100%;
+  height:65%;
+  padding: 15% 0 0 ;
+}
 #back{
     position:absolute;
     bottom:0;
@@ -39,33 +63,9 @@ $(function(){
 </style>
 </head>
 <body>
-<div id="wrapper">
-  <div class="link1">
-    <a href="ichiran.html"></a>
-  </div>
-	<div id="viewer">
-    <a href="ichiran.html"><img src="./images/illustrain01-hondana.png" alt="" class="example1" width="150" height="200"></a>
-    <a href="ichiran.html"><img src="./images/illustrain03-hondana.png" alt="" class="example1" width="150" height="200"></a>
-	</div>
-  <div class="link2">
-    <a href="husigi_ehon.html"></a>
-  </div>
-  <div id="viewer">
-      <a href="husigi_ehon.html"><img src="./images/bijutsu_art_paint01.png" alt="" class="example2" width="100" height="110"></a>
-      <a href="husigi_ehon.html"><img src="./images/bijutsu_art_paint02.png" alt="" class="example2" width="100" height="110"></a>
-  </div>
-  <div id="table">
-      <img src="./images/table.gif" alt="" width="220" height="200">
-  </div>
-  <div class="link3">
-      <a href="tabemono_ehon.html"></a>
-  </div>
-  <div id="viewer">
-      <a href="tabemono_ehon.html"><img src="./images/sweets_shortcake01.png" alt="" class="example3" width="50" height="50"></a>
-      <a href="tabemono_ehon.html"><img src="./images/sweets_shortcake02.png" alt="" class="example3" width="50" height="50"></a>
-  </div>
-  <div id="back">
-      <img src="images/Logo/back.png" onclick="history.back()">
+  <div class="index_link"><a href="h09_index.html">保護者ログイン</a></div>
+  <div class="start_btn">
+    <a href="h15_children_select.html">はじめる!</a>
   </div>
 </div>
 </body>
