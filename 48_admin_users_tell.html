@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>画面カスタマイズ</title>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.css"/>
+<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.js"></script>
+<style>
+textarea{
+width:400px;
+height:100px;
+}
+input[type=submit]{
+width:200px;
+}
+</style>
+</head>
+<body>
+<div data-role="content">
+<h1>通知画面</h1>
+<form action="45_admin_users_information.html">
+<table>
+<tr>
+<td>宛先</td>
+<td><input type="text" value="Jack<Jack@gmail.com>"></td>
+</tr>
+<tr>
+<td>要件</td>
+<td>
+<select>
+<option>報告</option>
+<option>返信</option>
+</select>
+</td>
+</tr>
+<tr>
+<td colspan="2">
+<textarea></textarea>
+</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<input type="submit" value="送信">
+</td>
+</tr>
+<tr>
+<td><a href="javascript:history.go(-1);">戻る</a></td>
+<td style="float:right;">
+<a href="36_admin_top.html" data-ajax="false">
+TOPページへ</a>
+</td>
+</tr>
+</table>
+</form>
+</div>

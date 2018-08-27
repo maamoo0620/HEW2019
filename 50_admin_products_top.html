@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset='utf-8'>
+  <title>管理者ページ</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script>
+     $(function(){
+       $("nav li").hover(
+         function(){
+           $("#navigator_comment").html($(this).attr("comment"));
+         },function(){
+           $("#navigator_comment").html("<h2>商品管理ページ</h2><p>商品情報の登録・削除・商品情報の変更<p>在庫の確認・追加などができます。</p>");
+         }
+       )
+       $(".admin_users_bar").hover(
+         function(){
+           $("#navigator_comment").html($(this).attr("comment"));
+         },
+         function(){
+           $("#navigator_comment").html("<h2>商品管理ページ</h2><p>商品情報の登録・削除・商品情報の変更<p>在庫の確認・追加などができます。</p>");
+         }
+       )
+     });
+  </script>
+  <style>
+  header{
+    display: inline-block;
+    float: left;
+  }
+  #admin_title{
+    font-size:black;
+    font-weight:bold;
+    display: inline-block;
+  }
+  #admin_title a{
+    text-decoration: none;
+  }
+  #admin_title img{
+    width:100px;
+    height:100px;
+  }
+  nav ul{
+    list-style:none;
+  }
+  nav ul li{
+    float: left;
+    padding: 20px;
+    cursor:pointer;
+  }
+  nav ul li:hover{
+    background-color:greenyellow;
+    color: white;
+  }
+  nav ul li{
+    text-decoration: none;
+    color: black;
+  }
+  #navigator{
+   width:auto;
+   height:229px;
+  }
+  #navigator img{
+    float: left;
+    height:229px;
+    width:220px;
+  }
+  #navigator_comment {
+    float: left;
+ 	position: relative;
+	display: inline-block;
+ 	margin: 1.5em 0 1.5em 15px;
+	padding: 7px 10px;
+	min-width: 120px;
+ 	max-width: 100%;
+ 	color: #555;
+	font-size: 16px;
+	background: #FFF;
+ 	border: solid 3px #555;
+ 	box-sizing: border-box;
+}
+
+#navigator_comment:before{
+	content: "";
+	position: absolute;
+	top: 50%;
+	left: -24px;
+ 	margin-top: -12px;
+	border: 12px solid transparent;
+	border-right: 12px solid #FFF;
+ 	z-index: 2;
+}
+
+#navigator_comment:after{
+	content: "";
+	position: absolute;
+	top: 50%;
+	left: -30px;
+ 	margin-top: -14px;
+	border: 14px solid transparent;
+	border-right: 14px solid #555;
+ 	z-index: 1;
+}
+
+#main_contents{
+  clear: both;
+}
+#main_contents a{
+  color: black;
+}
+.admin_users_bar{
+  width:200px;
+  height: 50px;
+  border-radius:20px;
+  border:2px solid black;
+  padding:20px;
+  margin:20px;
+  float: left;
+  cursor:pointer;
+}
+.admin_users_bar:hover{
+  background-color: blanchedalmond;
+  border-radius:40px;
+}
+@media screen and (max-width: 1040px) {
+#navigator{
+clear:both;
+}
+}
+  </style>
+</head>
+<body>
+  <header>
+  <h1 id="admin_title">
+  <a href="36_admin_top.html">
+  <img src="admin_top.png">
+  </a>
+  商品管理TOP
+  </h1>
+  <nav>
+    <ul>
+      <a href="42_admin_users_top.html">
+      <li alt="" comment="<h2>ユーザー管理ページ</h2><p>ユーザの検索・変更・通知などができます</p>">
+      ユーザ管理
+      </li>
+      </a>
+      <a href="50_admin_products_top.html">
+      <li alt="" comment="<h2>商品管理ページ</h2><p>商品情報の登録・削除・商品情報の変更<p>在庫の確認・追加などができます。</p>">
+      商品管理
+      </li></a>
+      <a href="64_admin_reviews_top.html">
+      <li alt="" comment="<h2>レビュー管理ページ</h2><p>商品・ユーザーごとのレビューを確認できます</p>">レビュー管理</li>
+      </a>
+    </ul>
+  </nav>
+  </header>
+  
+  <main>
+    <div id="navigator">
+      <img src="admin_nav.png">
+      <div id="navigator_comment">
+        <h2>商品管理ページ</h2><p>商品情報の登録・削除・商品情報の変更<p>在庫の確認・追加などができます。</p>
+      </div>
+    </div>
+    <div id="main_contents">
+      <a href="new_product_1.html">
+      <div class="admin_users_bar"
+      alt="" comment="<h2>商品登録</h2><p>商品を登録できます</p>">
+        <h3>商品登録</h3>
+      </div>
+      </a>
+      <a href="56_admin_products_view.html">
+      <div class="admin_users_bar"
+      alt="" comment="<h2>商品情報</h2><p>商品検索をします</p>">
+        <h3>商品情報</h3>
+      </div>
+      </a>
+      <a href="57_admin_products_update_view.html">
+      <div class="admin_users_bar"
+      alt="" comment="<h2>商品情報更新</h2><p>商品の情報を更新できます</p>">
+
+        <h3>商品情報更新</h3>
+      </div>
+      </a>
+      <a href="59_admin_products_delete_view.html">
+      <div class="admin_users_bar"
+      alt="" comment="<h2>商品削除</h2><p>商品を削除することができます</p>">
+        <h3>商品削除</h3>
+      </div>
+      </a>
+      <a href="58_admin_stock_page.html">
+      <div class="admin_users_bar"
+      alt="" comment="<h2>在庫管理</h2><p>在庫を追加したり状態を確認します</p>">
+        <h3>在庫管理</h3>
+      </div>
+      </a>
+      <a href="63_admin_acount_page.html">
+      <div class="admin_users_bar"
+      alt="" comment="<h2>注文検索</h2><p>注文を確認します</p>">
+        <h3>注文検索</h3>
+      </div>
+      </a>
+    </div>
+  </main>
+</body>
+</html>

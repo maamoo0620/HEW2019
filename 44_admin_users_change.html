@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>画面カスタマイズ</title>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.css"/>
+<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.js"></script>
+<script type="text/javascript">
+$(document).bind("mobileinit", function(){
+$.mobile.ajaxEnabled = false;
+$.mobile.ajaxLinksEnabled = false;
+$.mobile.ajaxFormsEnabled = false;
+$.mobile.defaultPageTransition = "";
+});
+</script>
+<script>
+$(function(){
+  $("#formOpen").toggle(
+  function(){
+  $("#syousai_search").show();
+    $("#formOpen span span").html("フォームを閉じる");
+  },function(){
+  $("#syousai_search").hide();
+    $("#formOpen span span").html("フォームを開く");
+  })
+});
+</script>
+<style>
+#syousai_search{
+  display: none;
+}
+td{
+margin: 10px;
+}
+</style>
+</head>
+<body>
+  <div data-role="page" id="admin_users_search">
+    <div data-role="header">
+      <h2>検索ページ</h2>
+    </div>
+    <div data-role="content">
+    <div data-role="button" id="formOpen">検索フォームを開く</div>
+    </div>
+    <form action="admin_users_view.html" method="get" id="syousai_search">
+    <table data-role="table" class="ui-responsive table-stripe" data-mode="columntoggle" data-column-btn-text="列の選択" data-column-btn-theme="b" data-column-popup-theme="b" id="rwd-table"
+    style="margin:0 auto;">
+    <tr>
+    <th>年齢</th>
+    <td>
+    <select>
+    <option>OF</option>
+    <option>ON</option>
+    </select>
+    </td>
+    <td>
+    <select name="select-choice-1" id="select-choice-1">
+<option value="20">0歳～20歳</option>
+<option value="30">20歳～30歳</option>
+<option value="over30">30歳～</option>
+</select>
+    </td>
+    </tr>
+    <tr>
+    <th>性別</th>
+    <td>
+    <select>
+    <option>OF</option>
+    <option>ON</option>
+    </select>
+    </td>
+    <td>
+    <select name="">
+    <option value="male">男性</option>
+    <option value="female">女性</option>
+    </select>
+    </td>
+    </tr>
+    <tr>
+    <th>購入回数</th>
+    <td>
+    <select>
+    <option>OF</option>
+    <option>ON</option>
+    </select>
+    </td>
+    <td>
+    <select>
+    <option value="1">0～4回</option>
+    <option value="2">5回～9回</option>
+    <option value="3">10回～20回</option>
+    <option value="4">21回以上</option>
+    </select>
+    </td>
+    </tr>
+    <tr>
+    <th>期間</th>
+    <td>
+    <select>
+    <option>OF</option>
+    <option>ON</option>
+    </select>
+    </td>
+    <td>
+    <select>
+    <option value="1">30日以内</option>
+    <option value="2">1週間以内</option>
+    <option value="3">1日以内</option>
+    </select>
+    </td>
+    </tr>
+    <tr>
+    <th>子供登録</th>
+    <td>
+    <select>
+    <option>OF</option>
+    <option>ON</option>
+    </select>
+    </td>
+    <td>
+    <select>
+    <option>あり</option>
+    <option>なし</option>
+    </select>
+    </td>
+    </tr>
+    <tr>
+    <th>削除フラグ</th>
+    <td>
+    <select>
+    <option>OF</option>
+    <option>ON</option>
+    </select>
+    </td>
+    <td>
+    <select>
+    <option>あり</option>
+    <option>なし</option>
+    </select>
+    </td>
+    </tr>
+</table>
+<input type="submit" value="送信">
+</form>
+<table data-role="table" class="ui-responsive table-stripe" data-mode="columntoggle" data-column-btn-text="列の選択" data-column-btn-theme="b" data-column-popup-theme="b" id="rwd-table">
+<tr>
+<th>商品名</th>
+<td><input type="search"></td>
+</tr>
+</table>
+      
+<table data-role="table" class="ui-responsive table-stripe" data-mode="columntoggle" data-column-btn-text="列の選択" data-column-btn-theme="b" data-column-popup-theme="b" id="rwd-table">
+	<thead>
+		<tr>
+  <th>＼</th>
+  <th>ユーザー名</th>
+  <th>購入回数</th>
+  <th>平均購入金額</th>
+  <th>購入一覧</th>
+  <th>レビュー回数</th>
+  <th>平均評価</th>
+  <th>レビュー一覧</th>
+  <th>子供登録</th>
+  <th>通知</th>
+  <th>削除フラグ</th>
+  <th>警告フラグ</th>
+  <th>決定</th>
+		</tr>
+	</thead>
+	<tbody>
+  <tr class="number">
+  <td>1</td>
+  <td>
+  <button>
+  Jack
+  </button>
+  </td>
+  <td>5回</td>
+  <td>880円</td>
+  <td>
+  <a href="">
+  <button>表示</button>
+  </a>
+  </td>
+  <td>0回</td>
+  <td>null</td>
+  <td>
+  <a href=""><button>表示</button></a>
+  </td>
+  <td>ある</td>
+    <td><a href="">
+  <button>通知</button>
+  </a>
+  </td>
+  <td>なし</td>
+  <td><select>
+  <option>なし</option>
+  <option>登録する</option>
+  </select></td>
+  </tr>
+  <tr class="number">
+  <td>2</td>
+  <td>
+  <button>
+  かっぱ
+  </button>
+  </td>
+  <td>0回</td>
+  <td>0円</td>
+  <td>
+  <a href="">
+  <button>表示</button>
+  </a>
+  </td>
+  <td>0回</td>
+  <td>null</td>
+  <td>
+  <a href=""><button>表示</button></a>
+  </td>
+  <td>ある</td>
+    <td><a href="">
+  <button>通知</button>
+  </a>
+  </td>
+  <td>あり</td>
+  <td>
+  <button>解除する</button>
+  </td>
+  </tr>
+	</tbody>
+</table>
+  </div>
+</body>
+</html>
