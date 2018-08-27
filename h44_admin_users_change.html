@@ -39,12 +39,26 @@ margin: 10px;
 <body>
   <div data-role="page" id="admin_users_search">
     <div data-role="header">
-      <h2>検索ページ</h2>
+      <a href="./h36_admin_top.html" data-ajax="false">Topページへ</a>
+      <h2>
+      <select>
+      <option>ユーザー情報更新</option>
+      <option>ユーザー検索</option>
+      <option>商品検索</option>
+      <option>注文検索</option>
+      <option>商品情報更新</option>
+      <option>在庫管理</option>
+      <option>商品削除</option>
+      <option>注文一覧</option>
+      </select></h2>
+      <input type="search">
+      <h3>
+      <input type="submit" value="OK"></h3>
     </div>
     <div data-role="content">
     <div data-role="button" id="formOpen">検索フォームを開く</div>
     </div>
-    <form action="admin_users_view.html" method="get" id="syousai_search">
+    <form action="" method="get" id="syousai_search" data-ajax="false">
     <table data-role="table" class="ui-responsive table-stripe" data-mode="columntoggle" data-column-btn-text="列の選択" data-column-btn-theme="b" data-column-popup-theme="b" id="rwd-table"
     style="margin:0 auto;">
     <tr>
