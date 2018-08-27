@@ -24,7 +24,12 @@
            $('#mypage .admin_email').text($email);
          }
        )
-
+       $("#mypage .change").one("click",function(){
+           $change=$(this).prev();
+           $change.html("<input type='text' value="+$change.text()+" />");
+           $(this).parent().append("<td><button>決定</button></td>");
+         }
+       )
      });
   </script>
   <script>
@@ -264,17 +269,17 @@ th,td{
       <tr>
         <th>管理者ID</th>
         <td class="admin_id">admin001</td>
-        <td>変更する</td>
+        <td class="change">変更する</td>
       </tr>
       <tr>
         <th>管理者名</th>
         <td class="admin_name">マウス</td>
-        <td>変更する</td>
+        <td class="change">変更する</td>
       </tr>
       <tr>
         <th>メールアドレス</th>
         <td class="admin_email">example.com</td>
-        <td>変更する</td>
+        <td class="change">変更する</td>
       </tr>
       <tr>
         <th>警告ユーザー</th>
