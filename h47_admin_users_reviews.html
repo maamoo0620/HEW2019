@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>画面カスタマイズ</title>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.css"/>
+<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.js"></script>
+<style>
+.product_wrapper{
+margin-bottom:30px;
+}
+.product{
+width:400px;
+border:1px solid black;
+}
+.product_review{
+width:400px;
+height:100px;
+border:1px solid black;
+}
+</style>
+</head>
+<body>
+<div data-role="content">
+
+<h2>レビュー一覧</h2>
+<h3>ユーザー名:
+<span name="userName">Jack
+</span></h3>
+<div class="product_wrapper">
+
+<div class="product">
+・商品名:<span name="product_name"></span></div>
+<div class="product"><span name="product_date">2018/8/17日</span></div>
+<img src="">
+<div class="product">
+<span name="product_review">
+★★★★☆4.0点</span>
+</div>
+<div class="product_review">
+<span name="product_comment">
+</span>
+</div>
+
+</div>
+<div class="product_wrapper">
+
+<div class="product">
+・商品名:<span name="product_name"></span></div>
+<div class="product"><span name="product_date">2018/8/17日</span></div>
+<img src="">
+<div class="product">
+<span name="product_review">
+★★★★☆4.0点</span>
+</div>
+<div class="product_review">
+<span name="product_comment">
+</span>
+</div>
+
+</div>
+<a href="javascript:history.go(-1);">戻る
+</a>
+</div>

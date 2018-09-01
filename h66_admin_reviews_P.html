@@ -1,0 +1,95 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>画面カスタマイズ</title>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.css"/>
+<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.js"></script>
+<script type="text/javascript">
+$(document).bind("mobileinit", function(){
+$.mobile.ajaxEnabled = false;
+$.mobile.ajaxLinksEnabled = false;
+$.mobile.ajaxFormsEnabled = false;
+$.mobile.defaultPageTransition = "";
+});
+</script>
+<style>
+#syousai_search{
+  display: none;
+}
+td{
+margin: 10px;
+}
+</style>
+</head>
+<body>
+  <div data-role="page" id="admin_users_search">
+    <div data-role="header">
+      <a href="./h36_admin_top.html" data-ajax="false">Topページへ</a>
+      <h2>
+      <select>
+      <option>商品レビュー</option>
+      <option>ユーザーレビュー</option>
+      <option>ユーザー検索</option>
+      <option>ユーザー情報更新</option>
+      <option>商品検索</option>
+      <option>注文検索</option>
+      <option>商品情報更新</option>
+      <option>在庫管理</option>
+      <option>商品削除</option>
+      <option>注文一覧</option>
+      </select></h2>
+      <input type="search">
+      <h3>
+      <input type="submit" value="OK"></h3>
+    </div>
+<table data-role="table" class="ui-responsive table-stripe" data-mode="columntoggle" data-column-btn-text="列の選択" data-column-btn-theme="b" data-column-popup-theme="b" id="rwd-table">
+<tr>
+<th>ジャンル名</th>
+<td><select>
+<option></option>
+<option>ファンタジー</option>
+<option>昔ばなし</option>
+</select></td>
+</tr>
+<tr>
+<th>商品名</th>
+<td><input type="search"></td>
+</tr>
+</table>
+
+      
+<table data-role="table" class="ui-responsive table-stripe" data-mode="columntoggle" data-column-btn-text="列の選択" data-column-btn-theme="b" data-column-popup-theme="b" id="rwd-table">
+	<thead>
+		<tr>
+  <th>＼</th>
+  <th>商品名</th>
+  <th>ジャンル名</th>
+  <th>平均評価点</th>
+  <th>レビュー回数</th>
+  <th>購入回数</th>
+  <th>注文一覧</th>
+  <th>一覧</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+  <td>1</td>
+  <td><a href=""><button>Jackの冒険</button>
+  </a></td>
+  <td><a href=""><button>ファンタジー</button>
+  </a></td>
+  <td>4.3点</td>
+  <td>9回</td>
+  <td>27回</td>
+  <td><a href="#"><button>表示</button></a></td>
+  <td><a href="h67_admin_products_reviews.html"><button>表示</button></a></td>
+		</tr>
+	</tbody>
+</table>
+</div>
+</body>
+</html>
