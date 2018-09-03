@@ -6,6 +6,15 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script>
      $(function(){
+       $("#admin_title a").hover(
+         function(){
+           $("#navigator_comment").html(
+             "<h2>Topページへのリンクです</h2><p>管理者ページへのTopへ戻ります</p>"
+           );
+         },function(){
+           $("#navigator_comment").html("<h2>こんにちは○○さん</h2>");
+         }
+       )
        $("nav li").hover(
          function(){
            $("#navigator_comment").html($(this).attr("comment"));
