@@ -6,6 +6,24 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script>
      $(function(){
+       $("#admin_title a").hover(
+         function(){
+           $("#navigator_comment").html(
+             "<h2>Topページへのリンクです</h2><p>管理者ページへのTopへ戻ります</p>"
+           );
+         },function(){
+           $("#navigator_comment").html("<h2>こんにちは○○さん</h2>");
+         }
+       )
+       $("#navigator img").hover(
+         function(){
+           $("#navigator_comment").html(
+             "<h2>ナビゲーターです</h2><p>通常のTopページへ戻ります</p>"
+           );
+         },function(){
+           $("#navigator_comment").html("<h2>こんにちは○○さん</h2>");
+         }
+       )
        $("nav li").hover(
          function(){
            $("#navigator_comment").html($(this).attr("comment"));
@@ -217,7 +235,9 @@ th,td{
   
   <main>
     <div id="navigator">
+      <a href="h09_index.html">
       <img src="admin_nav.png">
+      </a>
       <div id="navigator_comment">
         <h2>こんにちは○○さん</h2>
       </div>
@@ -293,7 +313,7 @@ th,td{
       </tr>
       </table>
     </div>
-    <a href="37_admin_top.html">
+    <a href="h37_admin_top.html">
     <button>マイページへ</button>
     </a>
     </div>

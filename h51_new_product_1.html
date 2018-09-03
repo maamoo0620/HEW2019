@@ -5,7 +5,19 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <script>
 $(function(){
-  //$(".image_wrapper img").attr('src');
+  $(".image_wrapper img").click(
+    function(){
+      $(this).attr("src","img/sample02.jpg");
+    }
+  )
+  $("#insert").click(
+    function(){
+      $(this).after(
+        "<p>作者2:<input type='text'/></p>"
+      );
+      $(this).hide();
+    }
+  )
 })
 </script>
 </head>
@@ -14,19 +26,23 @@ body{
 width:800px;
 margin:0 auto;
 }
+input:focus,textarea:focus {
+  outline: 0;
+  border-color: orange;
+}
 </style>
 <body>
 <div class="image_wrapper"
 style="float:left;">
-<img src="sample.jpg"
-style="height:200px;">
+<img src="img/sample01.jpg"
+style="width:200px;cursor:pointer;">
 </div>
 <div class="comment">
 <p>
 商品名:
 <input type="text">
 </p>
-<textarea style="height:180px;width:200px;margin:20px;" placeholder="説明文"></textarea>
+<textarea style="height:180px;width:300px;margin:20px;border-radius:10px;padding:20px;" placeholder="説明文"></textarea>
 
 </div>
 <div class="product_info"
@@ -41,11 +57,12 @@ style="clear:both;">
 <option>かわいい</option>
 <option>昔ばなし</option>
 <option>のりもの</option>
+<option>おばけ</option>
 </select>
 </p>
 <p>
 作者:
-<input type="text" />
+<input type="text" /><button id="insert" style="cursor:pointer;">追加</button>
 </p>
 <p>
 値段:
@@ -58,7 +75,12 @@ style="clear:both;">
 </p>
 </div>
 <div class="submit">
-<input type="submit" value="決定" style="width:80%;height:100px;font-size:36px;">
+<a href="h56_admin_products_view.html">
+<input type="submit" value="決定" style="width:80%;height:100px;font-size:36px;cursor:pointer;border-radius:20px;">
+</a>
+<a href="h50_admin_products_top.html">
+<button style="width:80%;height:100px;font-size:36px;cursor:pointer;border-radius:20px;margin-top:10px;">戻る</button>
+</a>
 </div>
 </body>
 </html>

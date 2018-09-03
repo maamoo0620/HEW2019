@@ -6,6 +6,24 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script>
      $(function(){
+       $("#admin_title a").hover(
+         function(){
+           $("#navigator_comment").html(
+             "<h2>Topページへのリンクです</h2><p>管理者ページへのTopへ戻ります</p>"
+           );
+         },function(){
+           $("#navigator_comment").html("<h2>こんにちは○○さん</h2>");
+         }
+       )
+       $("#navigator img").hover(
+         function(){
+           $("#navigator_comment").html(
+             "<h2>ナビゲーターです</h2><p>通常のTopページへ戻ります</p>"
+           );
+         },function(){
+           $("#navigator_comment").html("<h2>こんにちは○○さん</h2>");
+         }
+       )
        $("nav li").hover(
          function(){
            $("#navigator_comment").html($(this).attr("comment"));
@@ -13,9 +31,11 @@
            $("#navigator_comment").html("<h2>こんにちは○○さん</h2>");
          }
        )
-       $("#admin_plus").click(
-         function(){
-           $("#admin_plus_space").show()
+       
+       $("#mypage .change").one("click",function(){
+           $change=$(this).prev();
+           $change.html("<input type='text' value="+$change.text()+" />");
+           $(this).parent().append("<td><button>決定</button></td>");
          }
        )
      });
@@ -194,7 +214,9 @@ margin:20px;
   
   <main>
     <div id="navigator">
+      <a href="h09_index.html">
       <img src="admin_nav.png">
+      </a>
       <div id="navigator_comment">
         <h2>こんにちは○○さん</h2>
       </div>
@@ -205,18 +227,18 @@ margin:20px;
       <table>
       <tr>
         <th>管理者ID</th>
-        <td>admin001</td>
-        <td>変更する</td>
+        <td class="admin_id">admin001</td>
+        <td class="change">変更する</td>
       </tr>
       <tr>
         <th>管理者名</th>
-        <td>マウス</td>
-        <td>変更する</td>
+        <td class="admin_name">マウス</td>
+        <td class="change">変更する</td>
       </tr>
       <tr>
         <th>メールアドレス</th>
-        <td>example.com</td>
-        <td>変更する</td>
+        <td class="admin_email">example.com</td>
+        <td class="change">変更する</td>
       </tr>
       <tr>
         <th>警告ユーザー</th>
