@@ -1,258 +1,285 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset='utf-8'>
-  <title>管理者ページ</title>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-  <script>
-     $(function(){
-       $("#admin_title a").hover(
-         function(){
-           $("#navigator_comment").html(
-             "<h2>Topページへのリンクです</h2><p>管理者ページへのTopへ戻ります</p>"
-           );
-         },function(){
-           $("#navigator_comment").html("<h2>こんにちは○○さん</h2>");
-         }
-       )
-       $("#navigator img").hover(
-         function(){
-           $("#navigator_comment").html(
-             "<h2>ナビゲーターです</h2><p>通常のTopページへ戻ります</p>"
-           );
-         },function(){
-           $("#navigator_comment").html("<h2>こんにちは○○さん</h2>");
-         }
-       )
-       $("nav li").hover(
-         function(){
-           $("#navigator_comment").html($(this).attr("comment"));
-         },function(){
-           $("#navigator_comment").html("<h2>こんにちは○○さん</h2>");
-         }
-       )
-       
-       $("#mypage .change").one("click",function(){
-           $change=$(this).prev();
-           $change.html("<input type='text' value="+$change.text()+" />");
-           $(this).parent().append("<td><button>決定</button></td>");
-         }
-       )
-     });
-  </script>
-  <style>
-  header{
-    display: inline-block;
-    float: left;
-  }
-  #admin_title{
-    font-size:black;
-    font-weight:bold;
-    display: inline-block;
-  }
-  #admin_title a{
-    text-decoration: none;
-  }
-  #admin_title img{
-    width:100px;
-    height:100px;
-  }
-  nav ul{
-    list-style:none;
-  }
-  nav ul li{
-    float: left;
-    padding: 20px;
-    cursor:pointer;
-  }
-  nav ul li:hover{
-    background-color:greenyellow;
-    color: white;
-  }
-  nav ul li{
-    text-decoration: none;
-    color: black;
-  }
-  #navigator{
-   float: left;
-   width:700px;
-   height:229px;
-  }
-  #navigator img{
-    float: left;
-    height:229px;
-    width:220px;
-  }
-  #navigator_comment {
-  float: left;
- 	position: relative;
-	display: inline-block;
- 	margin: 1.5em 0 1.5em 15px;
-	padding: 7px 10px;
-	min-width: 120px;
- 	max-width: 100%;
- 	color: #555;
-	font-size: 16px;
-	background: #FFF;
- 	border: solid 3px #555;
- 	box-sizing: border-box;
-}
+    <meta charset='utf-8'>
+    <title>管理者ページ</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script>
+        $(function () {
+            $("#admin_title a").hover(
+                function () {
+                    $("#navigator_comment").html(
+                        "<h2>Topページへのリンクです</h2><p>管理者ページへのTopへ戻ります</p>"
+                    );
+                }, function () {
+                    $("#navigator_comment").html("<h2>こんにちは○○さん</h2>");
+                }
+            )
+            $("#navigator img").hover(
+                function () {
+                    $("#navigator_comment").html(
+                        "<h2>ナビゲーターです</h2><p>通常のTopページへ戻ります</p>"
+                    );
+                }, function () {
+                    $("#navigator_comment").html("<h2>こんにちは○○さん</h2>");
+                }
+            )
+            $("nav li").hover(
+                function () {
+                    $("#navigator_comment").html($(this).attr("comment"));
+                }, function () {
+                    $("#navigator_comment").html("<h2>こんにちは○○さん</h2>");
+                }
+            )
 
-#navigator_comment:before{
-	content: "";
-	position: absolute;
-	top: 50%;
-	left: -24px;
- 	margin-top: -12px;
-	border: 12px solid transparent;
-	border-right: 12px solid #FFF;
- 	z-index: 2;
-}
+            $("#mypage .change").one("click", function () {
+                    $change = $(this).prev();
+                    $change.html("<input type='text' value=" + $change.text() + " />");
+                    $(this).parent().append("<td><button>決定</button></td>");
+                }
+            )
+        });
+    </script>
+    <style>
+        header {
+            display : inline-block;
+            float   : left;
+        }
 
-#navigator_comment:after{
-	content: "";
-	position: absolute;
-	top: 50%;
-	left: -30px;
- 	margin-top: -14px;
-	border: 14px solid transparent;
-	border-right: 14px solid #555;
- 	z-index: 1;
-}
-button{
-margin:20px;
-}
-#admin_plus{
-  display:inline-block;
-}
-#admin_plus button{
- border-radius:5px;
- cursor:pointer;
-}
-#admin_plus_photo{
-  width: 50px;
-  height: 50px;
-}
-#admin_plus_space{
-  display:none;
-}
-#admin_access{
-  float: left;
-}
-.admin_page_access{
-  color:black;
-  cursor:pointer;
-  font-weight:middle;
-  border:1px solid black;
-}
-.admin_page_access:hover{
- background-color:chartreuse;
-}
-.admin_page_access .active{
-  color:brown;
-  font-weight:bold;
-}
-#mypage{
-  clear: both;
-}
-@media screen and (max-width: 1040px) {
-  #navigator img {
-    clear: both;
-  }
-}
-@media screen and (max-width: 760px) {
-  #admin_plus{
-    clear: both;
-    display:block;
-  }
-  
-}
-@media screen and (min-width: 760px) {
-  #navigator_comment:after{
-    clear: both;
-  }
-  #admin_plus{
-    clear: both;
-  }
-}
-@media screen and (min-width: 1100px) {
-  #navigator:after{
-    clear: both;
-  }
-  #admin_plus{
-    clear: both;
-    display:block;
-  }
-}
-  </style>
+        #admin_title {
+            font-size   : black;
+            font-weight : bold;
+            display     : inline-block;
+        }
+
+        #admin_title a {
+            text-decoration : none;
+        }
+
+        #admin_title img {
+            width  : 100px;
+            height : 100px;
+        }
+
+        nav ul {
+            list-style : none;
+        }
+
+        nav ul li {
+            float   : left;
+            padding : 20px;
+            cursor  : pointer;
+        }
+
+        nav ul li:hover {
+            background-color : greenyellow;
+            color            : white;
+        }
+
+        nav ul li {
+            text-decoration : none;
+            color           : black;
+        }
+
+        #navigator {
+            float  : left;
+            width  : 700px;
+            height : 229px;
+        }
+
+        #navigator img {
+            float  : left;
+            height : 229px;
+            width  : 220px;
+        }
+
+        #navigator_comment {
+            float      : left;
+            position   : relative;
+            display    : inline-block;
+            margin     : 1.5em 0 1.5em 15px;
+            padding    : 7px 10px;
+            min-width  : 120px;
+            max-width  : 100%;
+            color      : #555;
+            font-size  : 16px;
+            background : #FFF;
+            border     : solid 3px #555;
+            box-sizing : border-box;
+        }
+
+        #navigator_comment:before {
+            content      : "";
+            position     : absolute;
+            top          : 50%;
+            left         : -24px;
+            margin-top   : -12px;
+            border       : 12px solid transparent;
+            border-right : 12px solid #FFF;
+            z-index      : 2;
+        }
+
+        #navigator_comment:after {
+            content      : "";
+            position     : absolute;
+            top          : 50%;
+            left         : -30px;
+            margin-top   : -14px;
+            border       : 14px solid transparent;
+            border-right : 14px solid #555;
+            z-index      : 1;
+        }
+
+        button {
+            margin : 20px;
+        }
+
+        #admin_plus {
+            display : inline-block;
+        }
+
+        #admin_plus button {
+            border-radius : 5px;
+            cursor        : pointer;
+        }
+
+        #admin_plus_photo {
+            width  : 50px;
+            height : 50px;
+        }
+
+        #admin_plus_space {
+            display : none;
+        }
+
+        #admin_access {
+            float : left;
+        }
+
+        .admin_page_access {
+            color       : black;
+            cursor      : pointer;
+            font-weight : middle;
+            border      : 1px solid black;
+        }
+
+        .admin_page_access:hover {
+            background-color : chartreuse;
+        }
+
+        .admin_page_access .active {
+            color       : brown;
+            font-weight : bold;
+        }
+
+        #mypage {
+            clear : both;
+        }
+
+        @media screen and (max-width : 1040px) {
+            #navigator img {
+                clear : both;
+            }
+        }
+
+        @media screen and (max-width : 760px) {
+            #admin_plus {
+                clear   : both;
+                display : block;
+            }
+
+        }
+
+        @media screen and (min-width : 760px) {
+            #navigator_comment:after {
+                clear : both;
+            }
+
+            #admin_plus {
+                clear : both;
+            }
+        }
+
+        @media screen and (min-width : 1100px) {
+            #navigator:after {
+                clear : both;
+            }
+
+            #admin_plus {
+                clear   : both;
+                display : block;
+            }
+        }
+    </style>
 </head>
 <body>
-  <header>
-  <h1 id="admin_title">
-  <a href="h37_admin_top.html">
-  <img src="admin_top.png">
-  </a>
-  管理者TOPページ
-  </h1>
-  <nav>
-    <ul>
-      <a href="h42_admin_users_top.html">
-      <li alt="" comment="<h2>ユーザー管理ページ</h2><p>ユーザの検索・変更・通知などができます</p>">
-      ユーザ管理
-      </li>
-      </a>
-      <a href="h50_admin_products_top.html">
-      <li alt="" comment="<h2>商品管理ページ</h2><p>商品情報の登録・削除・商品情報の変更<p>在庫の確認・追加などができます。</p>">
-      商品管理
-      </li></a>
-      <a href="h64_admin_reviews_top.html">
-      <li alt="" comment="<h2>レビュー管理ページ</h2><p>商品ごとのレビューや</p><p>ユーザーごとのレビューを確認できます</p>">レビュー管理</li>
-      </a>
-    </ul>
-  </nav>
-  </header>
-  
-  <main>
-    <div id="navigator">
-      <a href="h09_index.html">
-      <img src="admin_nav.png">
-      </a>
-      <div id="navigator_comment">
-        <h2>こんにちは○○さん</h2>
-      </div>
-    </div>
-    <div id="main_contents">
-    <div id="mypage">
-    <h2>管理者のマイページ</h2>
-      <table>
-      <tr>
-        <th>管理者ID</th>
-        <td class="admin_id">admin001</td>
-        <td class="change">変更する</td>
-      </tr>
-      <tr>
-        <th>管理者名</th>
-        <td class="admin_name">マウス</td>
-        <td class="change">変更する</td>
-      </tr>
-      <tr>
-        <th>メールアドレス</th>
-        <td class="admin_email">example.com</td>
-        <td class="change">変更する</td>
-      </tr>
-      <tr>
-        <th>警告ユーザー</th>
-        <td>○人</td>
-        <td>詳細を見る</td>
-      </tr>
-      <tr>
-        <th>ToDoリスト</th>
-        <td>残り○件</td>
-        <td>詳細を見る</td>
-      </tr>
-      </table>
-    </div>
-    </div>
-  </main>
+    <header>
+        <h1 id="admin_title">
+            <a href="h37_admin_top.html">
+                <img src="admin_top.png">
+            </a>
+            管理者TOPページ
+        </h1>
+        <nav>
+            <ul>
+                <a href="h42_admin_users_top.html">
+                    <li alt="" comment="<h2>ユーザー管理ページ</h2><p>ユーザの検索・変更・通知などができます</p>">
+                        ユーザ管理
+                    </li>
+                </a>
+                <a href="h50_admin_products_top.html">
+                    <li alt="" comment="<h2>商品管理ページ</h2><p>商品情報の登録・削除・商品情報の変更<p>在庫の確認・追加などができます。</p>">
+                        商品管理
+                    </li>
+                </a>
+                <a href="h64_admin_reviews_top.html">
+                    <li alt="" comment="<h2>レビュー管理ページ</h2><p>商品ごとのレビューや</p><p>ユーザーごとのレビューを確認できます</p>">レビュー管理</li>
+                </a>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div id="navigator">
+            <a href="h09_index.html">
+                <img src="admin_nav.png">
+            </a>
+            <div id="navigator_comment">
+                <h2>こんにちは○○さん</h2>
+            </div>
+        </div>
+        <div id="main_contents">
+            <div id="mypage">
+                <h2>管理者のマイページ</h2>
+                <table>
+                    <tr>
+                        <th>管理者ID</th>
+                        <td class="admin_id">admin001</td>
+                        <td class="change">変更する</td>
+                    </tr>
+                    <tr>
+                        <th>管理者名</th>
+                        <td class="admin_name">マウス</td>
+                        <td class="change">変更する</td>
+                    </tr>
+                    <tr>
+                        <th>メールアドレス</th>
+                        <td class="admin_email">example.com</td>
+                        <td class="change">変更する</td>
+                    </tr>
+                    <tr>
+                        <th>警告ユーザー</th>
+                        <td>○人</td>
+                        <td>詳細を見る</td>
+                    </tr>
+                    <tr>
+                        <th>ToDoリスト</th>
+                        <td>残り○件</td>
+                        <td>詳細を見る</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </main>
 </body>
 </html>

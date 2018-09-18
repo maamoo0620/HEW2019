@@ -1,439 +1,478 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset='utf-8'>
-<link rel="stylesheet" href="css/jquery.skippr.css">
-<script src="js/jquery-1.11.0.min.js"></script>
-<script src="js/jquery.skippr.js"></script>
-<link rel="stylesheet" href="css/sanitize.css">
-<link rel="stylesheet" href="css/slimbox.css">
-<title>h09_index.html</title>
-<script>
-/*----------------------------------------------------------------------*/
-/* sp_nav_menu
-/*----------------------------------------------------------------------*/
+    <meta charset='utf-8'>
+    <link rel="stylesheet" href="css/jquery.skippr.css">
+    <script src="js/jquery-1.11.0.min.js"></script>
+    <script src="js/jquery.skippr.js"></script>
+    <link rel="stylesheet" href="css/sanitize.css">
+    <link rel="stylesheet" href="css/slimbox.css">
+    <title>h09_index.html</title>
+    <script>
+        /*----------------------------------------------------------------------*/
+        /* sp_nav_menu
+        /*----------------------------------------------------------------------*/
 
-$(function() {
-    $(".sp_nav_btn").on("click",function(){
-        $("body").toggleClass("is_active");
-    });
-    //on_wrapをクリックしたとき、クラスを削除
-    $(".on_wrap").on("click",function(){
-        $("body").removeClass("is_active");
-    });
+        $(function () {
+            $(".sp_nav_btn").on("click", function () {
+                $("body").toggleClass("is_active");
+            });
+            //on_wrapをクリックしたとき、クラスを削除
+            $(".on_wrap").on("click", function () {
+                $("body").removeClass("is_active");
+            });
 
-});
-</script>
-<style>
-@charset "UTF-8";
-*{
-  /* 全ての要素に対して反映される リセット */
-  margin:0;
-  padding:0;
-  outline:0;
-}
-html{
-  font-size: 62.5%; /* 10px */
-}
-@import url(https://fonts.googleapis.com/css?family=Lato:400,700);
-@import url(http://fonts.googleapis.com/earlyaccess/notosansjp.css);
-body {
-    padding:0;
-    margin:0;
-    font-family: "Lucida Grande", "segoe UI", "ヒラギノ丸ゴ ProN W4", "Hiragino Maru Gothic ProN", Meiryo, Arial, sans-serif;
-}
-.l_header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 100;
-    background: #6f0 ;
-    -webkit-transition: .3s;
-    transition: .3s
-}
+        });
+    </script>
+    <style>
+        @charset "UTF-8";
+        * {
+            /* 全ての要素に対して反映される リセット */
+            margin  : 0;
+            padding : 0;
+            outline : 0;
+        }
 
-.l_header .header_inner {
-    display: table;
-    width: 100%;
-    padding: 10px;
-    box-sizing: border-box;
-}
+        html {
+            font-size : 62.5%; /* 10px */
+        }
 
+        @import url(https://fonts.googleapis.com/css?family=Lato:400,700);
+        @import url(http://fonts.googleapis.com/earlyaccess/notosansjp.css);
+        body {
+            padding     : 0;
+            margin      : 0;
+            font-family : "Lucida Grande", "segoe UI", "ヒラギノ丸ゴ ProN W4", "Hiragino Maru Gothic ProN", Meiryo, Arial, sans-serif;
+        }
 
-.l_header .sp_nav_btn img{
-    display: table-cell;
-    width: 60px;
-    height: 60px;
-    float:left;
-    vertical-align: middle;
-    cursor: pointer
-}
-.sp_nav_btn p{
-  float:left;
-  margin:10px 0 0 50px;
-  font-size: 3rem;
-}
-.l_header .logo{
-    display: table-cell;
-    padding: 0 10px;
-    text-align: center;
-    vertical-align: middle;
-    box-sizing: border-box;
-}
-.l_header .logo img{
-    width: 100%;
-    max-width: 233px;
-}
-.wrap {
-    position: relative;
-    top: 0;
-    left: 0;
-    height: 100%;
-    background: #fff;
-    -webkit-transition: .3s;
-    transition: .3s
-}
+        .l_header {
+            position           : fixed;
+            top                : 0;
+            left               : 0;
+            width              : 100%;
+            z-index            : 100;
+            background         : #6f0;
+            -webkit-transition : .3s;
+            transition         : .3s
+        }
 
-.on_wrap {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-    -webkit-transition: .3s;
-    transition: .3s;
-    visibility: hidden
-}
+        .l_header .header_inner {
+            display    : table;
+            width      : 100%;
+            padding    : 10px;
+            box-sizing : border-box;
+        }
 
-.is_active .l_header {
-    left: 220px;
-    -webkit-transition: .3s;
-    transition: .3s
-}
+        .l_header .sp_nav_btn img {
+            display        : table-cell;
+            width          : 60px;
+            height         : 60px;
+            float          : left;
+            vertical-align : middle;
+            cursor         : pointer
+        }
 
-.is_active .wrap {
-    left: 220px;
-    -webkit-transition: .3s;
-    transition: .3s
-}
+        .sp_nav_btn p {
+            float     : left;
+            margin    : 10px 0 0 50px;
+            font-size : 3rem;
+        }
 
-.is_active .on_wrap {
-    position: fixed;
-    left: 220px;
-    width: 100%;
-    height: 100%;
-    z-index: 10000;
-    overflow: hidden;
-    visibility: visible;
-    -webkit-transition: .3s;
-    transition: .3s;
-    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.35)
-}
+        .l_header .logo {
+            display        : table-cell;
+            padding        : 0 10px;
+            text-align     : center;
+            vertical-align : middle;
+            box-sizing     : border-box;
+        }
 
-.is_active .l_nav {
-    position: fixed;
-    height: 100%;
-    left: 0;
-    overflow-y: auto;
-    -webkit-transition: .3s;
-    transition: .3s
-}
-.l_nav {
-    background: #fff;
-    width: 220px;
-    height: 100%;
-    position: fixed;
-    top: 0;
-    left: -220px;
-    z-index: 1000;
-    -webkit-transition: .3s;
-    transition: .3s
-}
-.nav_menu{
-    padding: 0;
-    list-style: none;
-}
-.l_nav .nav_menu li {
-    border-bottom: 1px solid #909090;
-}
+        .l_header .logo img {
+            width     : 100%;
+            max-width : 233px;
+        }
 
-.l_nav .nav_menu a {
-    font-size: 2rem;
-    display: block;
-    padding: 15px 0px 15px 15px;
-    color: #333
-}
-.l_nav .nav_menu a:hover{
-  color:#fff;
-  font-weight: bold;
-  background-color:#888;
-}
+        .wrap {
+            position           : relative;
+            top                : 0;
+            left               : 0;
+            height             : 100%;
+            background         : #fff;
+            -webkit-transition : .3s;
+            transition         : .3s
+        }
 
-.l_nav .nav_menu .nav_list_inner {
-    position: relative
-}
-.search_book{
-  position:absolute;
-  right:50px;
-  top:25px;
-}
-.search_book form input{
-  width:250px;
-  height:24px;
-  border-radius: 3px;
-}
-.search_book form button{
-  width:50px;
-  height:25px;
-  border-radius: 3px;
-}
-html{
-    overflow: auto;
-    height: 100%;
-    font-size: 65.5%;
-}
-body{
-    position: relative;
-    width: 100%;
-    height: 100%;
-    padding:50px 0 0 ;
-    overflow-x:hidden;
-}
+        .on_wrap {
+            position           : fixed;
+            top                : 0;
+            left               : 0;
+            width              : 100%;
+            height             : 100%;
+            z-index            : 1;
+            -webkit-transition : .3s;
+            transition         : .3s;
+            visibility         : hidden
+        }
 
-.bg_fixed {
-  margin:50px 0 0;
-  width:100%;
-  height: 400px;
-  background-color: #fff;
-  background-size: cover;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-position: center center;
-  z-index: 1;
-}
-.new_list{
-  font-size: 3rem;
-  color:#000;
-  margin:0 0 0 10%;
-}
-.new_list:hover{
-  color:#888;
-}
-.list{
-  width:80%;
-  height:300px;
-  padding:20px;
-  margin:0 auto;
-  border:solid 1px #ccc;
-  background-color: #fff;
-  white-space:nowrap;
-  overflow: scroll;
-}
-.list a img{
-  width:200px;
-  height:280px;
-  float:left;
-  margin:0 0 20px 20px;
-}
+        .is_active .l_header {
+            left               : 220px;
+            -webkit-transition : .3s;
+            transition         : .3s
+        }
 
-.scroll {
-  margin:50px 0 0;
-  padding:50px 0;
-  width:100%;
-  height: 400px;
-  background-color: #6f0;
-  z-index: 2;
-}
-.genre_title{
-  font-size: 3rem;
-  color:#000;
-  margin:0 0 0 10%;
-  float:left;
-}
-.genre_area{
-  clear:both;
-}
-.genre_btn{
-  width:260px;
-  height:260px;
-  margin:50px;
-  float:left;
-  border-radius: 130px;
-  background:#f00;
-}
-.genre_btn a{
-  display: block;
-  width:100%;
-  height:100%;
-  color:#fff;
-  font-weight:bold;
-  font-size: 3rem;
-  text-decoration: none;
-  text-align: center;
-  margin:100px 0 0;
-}
-.genre01{
-  background-color: #00ff3b;
-}
-.genre02{
-  background-color: #0ee;
-}
-.genre03{
-  background-color: #b6ff01;
-}
-.genre04{
-  background-color: #8a2be2;
-}
-.genre05{
-  background-color: #e00;
-}
-.genre06{
-  background-color: #ee0;
-}
-.genre07{
-  background-color: #00e;
-}
-.genre08{
-  background-color: #ff4f02;
-}
-#back{
-    position:absolute;
-    bottom:0;
-    left:20px;
-    position:fixed;
-}
-#back img{
-    border-radius:10px;
-    box-shadow: 0 5px 2px rgba(0,0,0,0.2);
-    width:50px;
-    cursor: pointer;
-}
-#back img:hover{
-    opacity:0.7;
-    transform: translate3d(0, 3px, 0);
-}
-</style>
+        .is_active .wrap {
+            left               : 220px;
+            -webkit-transition : .3s;
+            transition         : .3s
+        }
+
+        .is_active .on_wrap {
+            position           : fixed;
+            left               : 220px;
+            width              : 100%;
+            height             : 100%;
+            z-index            : 10000;
+            overflow           : hidden;
+            visibility         : visible;
+            -webkit-transition : .3s;
+            transition         : .3s;
+            box-shadow         : -2px 0 10px rgba(0, 0, 0, 0.35)
+        }
+
+        .is_active .l_nav {
+            position           : fixed;
+            height             : 100%;
+            left               : 0;
+            overflow-y         : auto;
+            -webkit-transition : .3s;
+            transition         : .3s
+        }
+
+        .l_nav {
+            background         : #fff;
+            width              : 220px;
+            height             : 100%;
+            position           : fixed;
+            top                : 0;
+            left               : -220px;
+            z-index            : 1000;
+            -webkit-transition : .3s;
+            transition         : .3s
+        }
+
+        .nav_menu {
+            padding    : 0;
+            list-style : none;
+        }
+
+        .l_nav .nav_menu li {
+            border-bottom : 1px solid #909090;
+        }
+
+        .l_nav .nav_menu a {
+            font-size : 2rem;
+            display   : block;
+            padding   : 15px 0px 15px 15px;
+            color     : #333
+        }
+
+        .l_nav .nav_menu a:hover {
+            color            : #fff;
+            font-weight      : bold;
+            background-color : #888;
+        }
+
+        .l_nav .nav_menu .nav_list_inner {
+            position : relative
+        }
+
+        .search_book {
+            position : absolute;
+            right    : 50px;
+            top      : 25px;
+        }
+
+        .search_book form input {
+            width         : 250px;
+            height        : 24px;
+            border-radius : 3px;
+        }
+
+        .search_book form button {
+            width         : 50px;
+            height        : 25px;
+            border-radius : 3px;
+        }
+
+        html {
+            overflow  : auto;
+            height    : 100%;
+            font-size : 65.5%;
+        }
+
+        body {
+            position   : relative;
+            width      : 100%;
+            height     : 100%;
+            padding    : 50px 0 0;
+            overflow-x : hidden;
+        }
+
+        .bg_fixed {
+            margin                : 50px 0 0;
+            width                 : 100%;
+            height                : 400px;
+            background-color      : #fff;
+            background-size       : cover;
+            background-attachment : fixed;
+            background-repeat     : no-repeat;
+            background-position   : center center;
+            z-index               : 1;
+        }
+
+        .new_list {
+            font-size : 3rem;
+            color     : #000;
+            margin    : 0 0 0 10%;
+        }
+
+        .new_list:hover {
+            color : #888;
+        }
+
+        .list {
+            width            : 80%;
+            height           : 300px;
+            padding          : 20px;
+            margin           : 0 auto;
+            border           : solid 1px #ccc;
+            background-color : #fff;
+            white-space      : nowrap;
+            overflow         : scroll;
+        }
+
+        .list a img {
+            width  : 200px;
+            height : 280px;
+            float  : left;
+            margin : 0 0 20px 20px;
+        }
+
+        .scroll {
+            margin           : 50px 0 0;
+            padding          : 50px 0;
+            width            : 100%;
+            height           : 400px;
+            background-color : #6f0;
+            z-index          : 2;
+        }
+
+        .genre_title {
+            font-size : 3rem;
+            color     : #000;
+            margin    : 0 0 0 10%;
+            float     : left;
+        }
+
+        .genre_area {
+            clear : both;
+        }
+
+        .genre_btn {
+            width         : 260px;
+            height        : 260px;
+            margin        : 50px;
+            float         : left;
+            border-radius : 130px;
+            background    : #f00;
+        }
+
+        .genre_btn a {
+            display         : block;
+            width           : 100%;
+            height          : 100%;
+            color           : #fff;
+            font-weight     : bold;
+            font-size       : 3rem;
+            text-decoration : none;
+            text-align      : center;
+            margin          : 100px 0 0;
+        }
+
+        .genre01 {
+            background-color : #00ff3b;
+        }
+
+        .genre02 {
+            background-color : #0ee;
+        }
+
+        .genre03 {
+            background-color : #b6ff01;
+        }
+
+        .genre04 {
+            background-color : #8a2be2;
+        }
+
+        .genre05 {
+            background-color : #e00;
+        }
+
+        .genre06 {
+            background-color : #ee0;
+        }
+
+        .genre07 {
+            background-color : #00e;
+        }
+
+        .genre08 {
+            background-color : #ff4f02;
+        }
+
+        #back {
+            position : absolute;
+            bottom   : 0;
+            left     : 20px;
+            position : fixed;
+        }
+
+        #back img {
+            border-radius : 10px;
+            box-shadow    : 0 5px 2px rgba(0, 0, 0, 0.2);
+            width         : 50px;
+            cursor        : pointer;
+        }
+
+        #back img:hover {
+            opacity   : 0.7;
+            transform : translate3d(0, 3px, 0);
+        }
+    </style>
 </head>
 <body>
-  <div class="l_nav">
-      <nav class="nav">
-          <ul class="nav_menu">
-              <li>
-                  <div class="nav_list_inner">
-                      <a href="#">おすすめ</a>
-                  </div>
-              </li>
-              <li>
-                  <div class="nav_list_inner">
-                      <a href="#">絵本一覧</a>
-                  </div>
-              </li>
-              <li>
-                  <div class="nav_list_inner">
-                      <a href="h18_genre.html">絵本ジャンル</a>
-                  </div>
-              </li>
-              <li>
-                  <div class="nav_list_inner">
-                      <a href="h14_children_start.html">子どもログイン</a>
-                  </div>
-              </li>
-              <li>
-                  <div class="nav_list_inner">
-                      <a href="h12_add_change.html">ユーザ登録/変更</a>
-                  </div>
-              </li>
-              <li>
-                  <div class="nav_list_inner">
-                      <a href="h10_wanted_list.html">ほしいものリスト</a>
-                  </div>
-              </li>
-              <li>
-                  <div class="nav_list_inner">
-                      <a href="h11_purchase_history.html">購入履歴</a>
-                  </div>
-              </li>
-              <li>
-                  <div class="nav_list_inner">
-                      <a href="#.html">設定</a>
-                  </div>
-              </li>
-              <li>
-                  <div class="nav_list_inner">
-                      <a href="#">ログアウト</a>
-                  </div>
-              </li>
-          </ul>
-      </nav>
-  </div>
-  <!-- div[side_nav] -->
-  <div class="on_wrap"></div>
-  <div class="wrap">
-    <div class=" l_header">
-        <div class="header_inner inner">
-            <div class="sp sp_nav_btn">
-                <img src="img/menu_btn.jpg" alt="" width="50px" height="50px">
-                <p>絵本の森</p>
+    <div class="l_nav">
+        <nav class="nav">
+            <ul class="nav_menu">
+                <li>
+                    <div class="nav_list_inner">
+                        <a href="#">おすすめ</a>
+                    </div>
+                </li>
+                <li>
+                    <div class="nav_list_inner">
+                        <a href="#">絵本一覧</a>
+                    </div>
+                </li>
+                <li>
+                    <div class="nav_list_inner">
+                        <a href="h18_genre.html">絵本ジャンル</a>
+                    </div>
+                </li>
+                <li>
+                    <div class="nav_list_inner">
+                        <a href="h14_children_start.html">子どもログイン</a>
+                    </div>
+                </li>
+                <li>
+                    <div class="nav_list_inner">
+                        <a href="h12_add_change.html">ユーザ登録/変更</a>
+                    </div>
+                </li>
+                <li>
+                    <div class="nav_list_inner">
+                        <a href="h10_wanted_list.html">ほしいものリスト</a>
+                    </div>
+                </li>
+                <li>
+                    <div class="nav_list_inner">
+                        <a href="h31_cart.html">カート</a>
+                    </div>
+                </li>
+                <li>
+                    <div class="nav_list_inner">
+                        <a href="h11_purchase_history.html">購入履歴</a>
+                    </div>
+                </li>
+                <li>
+                    <div class="nav_list_inner">
+                        <a href="#.html">設定</a>
+                    </div>
+                </li>
+                <li>
+                    <div class="nav_list_inner">
+                        <a href="#">ログアウト</a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <!-- div[side_nav] -->
+    <div class="on_wrap"></div>
+    <div class="wrap">
+        <div class=" l_header">
+            <div class="header_inner inner">
+                <div class="sp sp_nav_btn">
+                    <img src="img/menu_btn.jpg" alt="" width="50px" height="50px">
+                    <p>絵本の森</p>
+                </div>
+            </div>
+            <div class="search_book">
+                <form action="h16_search_result.html">
+                    <input type="text" placeholder="キーワードを入力してください">
+                    <button type="submit">検索</button>
+                </form>
             </div>
         </div>
-        <div class="search_book">
-          <form action="h16_search_result.html">
-            <input type="text" placeholder="キーワードを入力してください">
-            <button type="submit">検索</button>
-          </form>
+        <div class="bg_fixed">
+            <a href="#" class="new_list">最新おすすめ一覧>></a>
+            <div class="list">
+                <a href=""><img src="img/book001.jpg"></a>
+                <a href=""><img src="img/book002.jpg"></a>
+                <a href=""><img src="img/book003.jpg"></a>
+                <a href=""><img src="img/book004.jpg"></a>
+                <a href=""><img src="img/book005.jpg"></a>
+                <a href=""><img src="img/book006.jpg"></a>
+                <a href=""><img src="img/book007.jpg"></a>
+                <a href=""><img src="img/book008.jpg"></a>
+                <a href=""><img src="img/book009.jpg"></a>
+                <a href=""><img src="img/book010.jpg"></a>
+            </div>
+        </div>
+
+        <div class="scroll">
+            <a href="#" class="new_list">全ての絵本>></a>
+            <div class="list">
+                <a href=""><img src="img/book001.jpg"></a>
+                <a href=""><img src="img/book002.jpg"></a>
+                <a href=""><img src="img/book003.jpg"></a>
+                <a href=""><img src="img/book004.jpg"></a>
+                <a href=""><img src="img/book005.jpg"></a>
+                <a href=""><img src="img/book006.jpg"></a>
+                <a href=""><img src="img/book007.jpg"></a>
+                <a href=""><img src="img/book008.jpg"></a>
+                <a href=""><img src="img/book009.jpg"></a>
+                <a href=""><img src="img/book010.jpg"></a>
+            </div>
+        </div>
+        <div class="bg_fixed">
+            <a href="h18_genre.html" class="genre_title">ジャンル一覧>></a>
+            <div class="genre_area">
+                <div class="genre_btn genre01"><a href="h18_genre.html">おはな</a></div>
+                <div class="genre_btn genre02"><a href="h18_genre.html">のりもの</a></div>
+                <div class="genre_btn genre03"><a href="h18_genre.html">おばけ<br>ようかい</a></div>
+                <div class="genre_btn genre04"><a href="h18_genre.html">たべもの</a></div>
+                <div class="genre_btn genre05"><a href="h18_genre.html">ことば<br>かず</a></div>
+                <div class="genre_btn genre06"><a href="h18_genre.html">どうぶつ</a></div>
+                <div class="genre_btn genre07"><a href="h18_genre.html">ともだち</a></div>
+                <div class="genre_btn genre08"><a href="h18_genre.html">がっこう</a></div>
+            </div>
+        </div>
+        <div class="bg_fixed2"></div>
+
+        <div class="l_footer">
+
         </div>
     </div>
-    <div class="bg_fixed">
-      <a href="#" class="new_list">最新おすすめ一覧>></a>
-      <div class="list">
-        <a href=""><img src="img/book001.jpg"></a>
-        <a href=""><img src="img/book002.jpg"></a>
-        <a href=""><img src="img/book003.jpg"></a>
-        <a href=""><img src="img/book004.jpg"></a>
-        <a href=""><img src="img/book005.jpg"></a>
-        <a href=""><img src="img/book006.jpg"></a>
-        <a href=""><img src="img/book007.jpg"></a>
-        <a href=""><img src="img/book008.jpg"></a>
-        <a href=""><img src="img/book009.jpg"></a>
-        <a href=""><img src="img/book010.jpg"></a>
-      </div>
-    </div>
-
-    <div class="scroll">
-      <a href="#" class="new_list">全ての絵本>></a>
-      <div class="list">
-        <a href=""><img src="img/book001.jpg"></a>
-        <a href=""><img src="img/book002.jpg"></a>
-        <a href=""><img src="img/book003.jpg"></a>
-        <a href=""><img src="img/book004.jpg"></a>
-        <a href=""><img src="img/book005.jpg"></a>
-        <a href=""><img src="img/book006.jpg"></a>
-        <a href=""><img src="img/book007.jpg"></a>
-        <a href=""><img src="img/book008.jpg"></a>
-        <a href=""><img src="img/book009.jpg"></a>
-        <a href=""><img src="img/book010.jpg"></a>
-      </div>
-    </div>
-    <div class="bg_fixed">
-      <a href="h18_genre.html" class="genre_title">ジャンル一覧>></a>
-      <div class="genre_area">
-        <div class="genre_btn genre01"><a href="h18_genre.html">おはな</a></div>
-        <div class="genre_btn genre02"><a href="h18_genre.html">のりもの</a></div>
-        <div class="genre_btn genre03"><a href="h18_genre.html">おばけ<br>ようかい</a></div>
-        <div class="genre_btn genre04"><a href="h18_genre.html">たべもの</a></div>
-        <div class="genre_btn genre05"><a href="h18_genre.html">ことば<br>かず</a></div>
-        <div class="genre_btn genre06"><a href="h18_genre.html">どうぶつ</a></div>
-        <div class="genre_btn genre07"><a href="h18_genre.html">ともだち</a></div>
-        <div class="genre_btn genre08"><a href="h18_genre.html">がっこう</a></div>
-      </div>
-    </div>
-    <div class="bg_fixed2"></div>
-
-    <div class="l_footer">
-
-    </div>
-  </div>
 </body>
 </html>

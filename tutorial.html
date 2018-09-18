@@ -1,157 +1,173 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset='utf-8'>
-<title></title>
-<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" media="all">
-<style>
-body{
-  margin:0 auto;
-}
-nav{
-  background-color: blue;
-}
-#title_wrapper{
-  width: 140px;
-  background-color:aqua;
-  margin:0 auto;
-  padding:0 20px;
-  border-top-left-radius: 25px;
-  border-top-right-radius: 25px;
-}
-#title_wrapper img{
-  width: 140px;
-}
+    <meta charset='utf-8'>
+    <title></title>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet"
+          media="all">
+    <style>
+        body {
+            margin : 0 auto;
+        }
 
-#title_wrapper a:hover{
-  opacity:0.5;
-}
+        nav {
+            background-color : blue;
+        }
 
-#menu_wrapper{
-  background-color:silver;
-}
-@media screen and (max-width:720px) { 
-  
-}
-@media screen and (min-width:720px){
-  #menu{
-    padding-left:20px;
-    padding-top:12.5px;
-    width:480px;
-    margin:0 auto;
-    height:40px;
-    border-top-left-radius: 25px;
-    border-top-right-radius: 25px;
-  }
-  #menu a{
-    float: left;
-    list-style:none;
-    padding-right:10px;
-  }
-  #menu a:hover{
-    opacity:0.5;
-  }
-  #menu img{
-    width:80px;
-  }
-  
-  #screen{
-    position:relative;
-    width:100%;
-    padding-top:50px;
-    height:500px;
-  }
-  #message{
-    width:100px;
-    margin: 0 auto;
-    font-size:25px;
-  }
-  #contents{
-    margin-top: 50px;
-    margin-left: auto;
-    margin-right: auto;
-    width:720px;
-  }
-  .step{
-    width: 200px;
-    height: 200px;
-    float: left;
-    background-color: aqua;
-    margin-top:20px;
-    margin-left:10px;
-    margin-right:20px;
-    text-align: center;
-  }
-  .step1,.step2{
-    margin-right: 30px;
-  }
-  #back{
-    position:absolute;
-    bottom:0;
-    left:20px;
-  }
-  #back img{
-    border-radius:10px;
-    box-shadow: 0 5px 2px rgba(0,0,0, .2);
-    width:50px;
-    cursor: pointer;
-  }
-  #back img:hover{
-    opacity:0.7;
-    transform: translate3d(0, 3px, 0);
-  }
-}
-</style>
+        #title_wrapper {
+            width                   : 140px;
+            background-color        : aqua;
+            margin                  : 0 auto;
+            padding                 : 0 20px;
+            border-top-left-radius  : 25px;
+            border-top-right-radius : 25px;
+        }
+
+        #title_wrapper img {
+            width : 140px;
+        }
+
+        #title_wrapper a:hover {
+            opacity : 0.5;
+        }
+
+        #menu_wrapper {
+            background-color : silver;
+        }
+
+        @media screen and (max-width : 720px) {
+
+        }
+
+        @media screen and (min-width : 720px) {
+            #menu {
+                padding-left            : 20px;
+                padding-top             : 12.5px;
+                width                   : 480px;
+                margin                  : 0 auto;
+                height                  : 40px;
+                border-top-left-radius  : 25px;
+                border-top-right-radius : 25px;
+            }
+
+            #menu a {
+                float         : left;
+                list-style    : none;
+                padding-right : 10px;
+            }
+
+            #menu a:hover {
+                opacity : 0.5;
+            }
+
+            #menu img {
+                width : 80px;
+            }
+
+            #screen {
+                position    : relative;
+                width       : 100%;
+                padding-top : 50px;
+                height      : 500px;
+            }
+
+            #message {
+                width     : 100px;
+                margin    : 0 auto;
+                font-size : 25px;
+            }
+
+            #contents {
+                margin-top   : 50px;
+                margin-left  : auto;
+                margin-right : auto;
+                width        : 720px;
+            }
+
+            .step {
+                width            : 200px;
+                height           : 200px;
+                float            : left;
+                background-color : aqua;
+                margin-top       : 20px;
+                margin-left      : 10px;
+                margin-right     : 20px;
+                text-align       : center;
+            }
+
+            .step1, .step2 {
+                margin-right : 30px;
+            }
+
+            #back {
+                position : absolute;
+                bottom   : 0;
+                left     : 20px;
+            }
+
+            #back img {
+                border-radius : 10px;
+                box-shadow    : 0 5px 2px rgba(0, 0, 0, .2);
+                width         : 50px;
+                cursor        : pointer;
+            }
+
+            #back img:hover {
+                opacity   : 0.7;
+                transform : translate3d(0, 3px, 0);
+            }
+        }
+    </style>
 </head>
 <body>
-<div id="wrapper">
-    <nav>
-    <div id="title_wrapper">
-    <a href="home.html">
-      <img src="images/Logo/title2.png" id="title">
-    </a>
-    </div>
-    <div id="menu_wrapper">
-    <div id="menu">
-          <a href="ichiran.html">
-            <img src="images/Logo/iti.png">
-          </a>
-          <a href="genre.html">
-            <img src="images/Logo/gen.png">
-          </a>
-          <a href="#"><img src="images/Logo/okini.png"></a>
-          <a href="#"><img src="images/Logo/user.png"></a>
-          <a href="logout.html"><img src="images/Logo/logoff.png"></a>
-    </div>
-    </div>
-    </nav>
-    
-    <div id="screen">
-      <div id="message">
-        ようこそ!
-      </div>
-      <div id="contents">
-        <div class="step step1">
-          <h2>STEP1</h2>
-          <p>チュートリアル</p>
-          <p>サイトの使用方法</p>
+    <div id="wrapper">
+        <nav>
+            <div id="title_wrapper">
+                <a href="home.html">
+                    <img src="images/Logo/title2.png" id="title">
+                </a>
+            </div>
+            <div id="menu_wrapper">
+                <div id="menu">
+                    <a href="ichiran.html">
+                        <img src="images/Logo/iti.png">
+                    </a>
+                    <a href="genre.html">
+                        <img src="images/Logo/gen.png">
+                    </a>
+                    <a href="#"><img src="images/Logo/okini.png"></a>
+                    <a href="#"><img src="images/Logo/user.png"></a>
+                    <a href="logout.html"><img src="images/Logo/logoff.png"></a>
+                </div>
+            </div>
+        </nav>
+
+        <div id="screen">
+            <div id="message">
+                ようこそ!
+            </div>
+            <div id="contents">
+                <div class="step step1">
+                    <h2>STEP1</h2>
+                    <p>チュートリアル</p>
+                    <p>サイトの使用方法</p>
+                </div>
+                <div class="step step2">
+                    <h2>STEP2</h2>
+                    <p>子供用サイトとは!</p>
+                </div>
+                <div class="step">
+                    <h2>STEP3</h2>
+                    <p>子供用アカウントを作ろう</p>
+                </div>
+            </div>
+
+            <div id="back">
+                <img src="images/Logo/back.png" onclick="history.back()">
+            </div>
+
         </div>
-        <div class="step step2">
-          <h2>STEP2</h2>
-          <p>子供用サイトとは!</p>
-        </div>
-        <div class="step">
-          <h2>STEP3</h2>
-          <p>子供用アカウントを作ろう</p>
-        </div>
-      </div>
-    
-    <div id="back">
-        <img src="images/Logo/back.png" onclick="history.back()">
+
     </div>
-    
-    </div>
-    
-</div>
 </body>
 </html>
