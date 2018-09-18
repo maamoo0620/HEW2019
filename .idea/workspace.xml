@@ -1,57 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9c77d8fd-4607-4f7d-97af-a49a766c9096" name="デフォルト" comment="">
-      <change beforePath="$PROJECT_DIR$/admin_menu.html" afterPath="$PROJECT_DIR$/admin_menu.html" />
-      <change beforePath="$PROJECT_DIR$/h01_introduction.html" afterPath="$PROJECT_DIR$/h01_introduction.html" />
-      <change beforePath="$PROJECT_DIR$/h03_new_acount.html" afterPath="$PROJECT_DIR$/h03_new_acount.html" />
-      <change beforePath="$PROJECT_DIR$/h04_new_email.html" afterPath="$PROJECT_DIR$/h04_new_email.html" />
-      <change beforePath="$PROJECT_DIR$/h06_07_new_result.html" afterPath="$PROJECT_DIR$/h06_07_new_result.html" />
-      <change beforePath="$PROJECT_DIR$/h08_login.html" afterPath="$PROJECT_DIR$/h08_login.html" />
-      <change beforePath="$PROJECT_DIR$/h09_index.html" afterPath="$PROJECT_DIR$/h09_index.html" />
-      <change beforePath="$PROJECT_DIR$/h10_wanted_list.html" afterPath="$PROJECT_DIR$/h10_wanted_list.html" />
-      <change beforePath="$PROJECT_DIR$/h11_purchase_history.html" afterPath="$PROJECT_DIR$/h11_purchase_history.html" />
-      <change beforePath="$PROJECT_DIR$/h12_add_change.html" afterPath="$PROJECT_DIR$/h12_add_change.html" />
-      <change beforePath="$PROJECT_DIR$/h13_create_account.html" afterPath="$PROJECT_DIR$/h13_create_account.html" />
-      <change beforePath="$PROJECT_DIR$/h14_children_start.html" afterPath="$PROJECT_DIR$/h14_children_start.html" />
-      <change beforePath="$PROJECT_DIR$/h15_children_select.html" afterPath="$PROJECT_DIR$/h15_children_select.html" />
-      <change beforePath="$PROJECT_DIR$/h16_search_result.html" afterPath="$PROJECT_DIR$/h16_search_result.html" />
-      <change beforePath="$PROJECT_DIR$/h17_book_list.html" afterPath="$PROJECT_DIR$/h17_book_list.html" />
-      <change beforePath="$PROJECT_DIR$/h18_genre.html" afterPath="$PROJECT_DIR$/h18_genre.html" />
-      <change beforePath="$PROJECT_DIR$/h20-26_ichiran.html" afterPath="$PROJECT_DIR$/h20-26_ichiran.html" />
-      <change beforePath="$PROJECT_DIR$/h27_Review.html" afterPath="$PROJECT_DIR$/h27_Review.html" />
-      <change beforePath="$PROJECT_DIR$/h28_buy.html" afterPath="$PROJECT_DIR$/h28_buy.html" />
-      <change beforePath="$PROJECT_DIR$/h29_buycheck.html" afterPath="$PROJECT_DIR$/h29_buycheck.html" />
-      <change beforePath="$PROJECT_DIR$/h30_buy_fin.html" afterPath="$PROJECT_DIR$/h30_buy_fin.html" />
-      <change beforePath="$PROJECT_DIR$/h31_cart.html" afterPath="$PROJECT_DIR$/h31_cart.html" />
-      <change beforePath="$PROJECT_DIR$/h32_ReviewWrite.html" afterPath="$PROJECT_DIR$/h32_ReviewWrite.html" />
-      <change beforePath="$PROJECT_DIR$/h34_admin_login.html" afterPath="$PROJECT_DIR$/h34_admin_login.html" />
-      <change beforePath="$PROJECT_DIR$/h36_admin_top.html" afterPath="$PROJECT_DIR$/h36_admin_top.html" />
-      <change beforePath="$PROJECT_DIR$/h37_admin_top.html" afterPath="$PROJECT_DIR$/h37_admin_top.html" />
-      <change beforePath="$PROJECT_DIR$/h42_admin_users_top.html" afterPath="$PROJECT_DIR$/h42_admin_users_top.html" />
-      <change beforePath="$PROJECT_DIR$/h43_admin_users_view.html" afterPath="$PROJECT_DIR$/h43_admin_users_view.html" />
-      <change beforePath="$PROJECT_DIR$/h44_admin_users_change.html" afterPath="$PROJECT_DIR$/h44_admin_users_change.html" />
-      <change beforePath="$PROJECT_DIR$/h45_admin_users_information.html" afterPath="$PROJECT_DIR$/h45_admin_users_information.html" />
-      <change beforePath="$PROJECT_DIR$/h46_admin_users_trades.html" afterPath="$PROJECT_DIR$/h46_admin_users_trades.html" />
-      <change beforePath="$PROJECT_DIR$/h47_admin_users_reviews.html" afterPath="$PROJECT_DIR$/h47_admin_users_reviews.html" />
-      <change beforePath="$PROJECT_DIR$/h48_admin_users_tell.html" afterPath="$PROJECT_DIR$/h48_admin_users_tell.html" />
-      <change beforePath="$PROJECT_DIR$/h49_admin_users_warning.html" afterPath="$PROJECT_DIR$/h49_admin_users_warning.html" />
-      <change beforePath="$PROJECT_DIR$/h50_admin_products_top.html" afterPath="$PROJECT_DIR$/h50_admin_products_top.html" />
-      <change beforePath="$PROJECT_DIR$/h51_new_product_1.html" afterPath="$PROJECT_DIR$/h51_new_product_1.html" />
-      <change beforePath="$PROJECT_DIR$/h56_admin_products_view.html" afterPath="$PROJECT_DIR$/h56_admin_products_view.html" />
-      <change beforePath="$PROJECT_DIR$/h57_admin_products_update_view.html" afterPath="$PROJECT_DIR$/h57_admin_products_update_view.html" />
-      <change beforePath="$PROJECT_DIR$/h58_admin_stock_page.html" afterPath="$PROJECT_DIR$/h58_admin_stock_page.html" />
-      <change beforePath="$PROJECT_DIR$/h59_admin_products_delete_view.html" afterPath="$PROJECT_DIR$/h59_admin_products_delete_view.html" />
-      <change beforePath="$PROJECT_DIR$/h63_admin_acount_page.html" afterPath="$PROJECT_DIR$/h63_admin_acount_page.html" />
-      <change beforePath="$PROJECT_DIR$/h64_admin_reviews_top.html" afterPath="$PROJECT_DIR$/h64_admin_reviews_top.html" />
-      <change beforePath="$PROJECT_DIR$/h65_admin_reviews_U.html" afterPath="$PROJECT_DIR$/h65_admin_reviews_U.html" />
-      <change beforePath="$PROJECT_DIR$/h66_admin_reviews_P.html" afterPath="$PROJECT_DIR$/h66_admin_reviews_P.html" />
-      <change beforePath="$PROJECT_DIR$/h67_admin_products_reviews.html" afterPath="$PROJECT_DIR$/h67_admin_products_reviews.html" />
-      <change beforePath="$PROJECT_DIR$/husigi_ehon.html" afterPath="$PROJECT_DIR$/husigi_ehon.html" />
-      <change beforePath="$PROJECT_DIR$/sample.html" afterPath="$PROJECT_DIR$/sample.html" />
-      <change beforePath="$PROJECT_DIR$/tabemono_ehon.html" afterPath="$PROJECT_DIR$/tabemono_ehon.html" />
-      <change beforePath="$PROJECT_DIR$/tutorial.html" afterPath="$PROJECT_DIR$/tutorial.html" />
-    </list>
+    <list default="true" id="9c77d8fd-4607-4f7d-97af-a49a766c9096" name="デフォルト" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -374,12 +324,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1537244988226</updated>
-      <workItem from="1537244989898" duration="4141000" />
+      <workItem from="1537244989898" duration="4357000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4141000" />
+    <option name="totallyTimeSpent" value="4357000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
